@@ -1,0 +1,31 @@
+{
+  "name": "studly",
+  "version": "2.0.0",
+  "description": "Studly — EGCSE & JC mastery learning app for Eswatini students",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed": "node scripts/seedData.js",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["studly", "egcse", "jc", "eswatini", "education"],
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "compression": "^1.7.5",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.2.0",
+    "mongodb-memory-server-core": "^11.2.0",
+    "mongoose": "^9.5.0",
+    "nodemon": "^3.1.14"
+  }
+}
