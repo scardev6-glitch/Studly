@@ -1,4 +1,4 @@
-const Notification = require('../models/Notification');
+const Notification = require("../models/Notification");
 
 async function getNotifications(req, res) {
   try {
@@ -11,7 +11,10 @@ async function getNotifications(req, res) {
       .skip(skip)
       .limit(limit);
 
-    const unreadCount = await Notification.countDocuments({ userId: req.user.id, isRead: false });
+    const unreadCount = await Notification.countDocuments({
+      userId: req.user.id,
+      isRead: false,
+    });
 
     res.json({ notifications, unreadCount, page, limit });
   } catch (error) {
@@ -23,44 +26,62 @@ async function getNotifications(req, res) {
 async function markAsRead(req, res) {
   try {
     const { id } = req.params;
-    if (id === 'all') {
-      await Notification.updateMany({ userId: req.user.id, isRead: false }, { isRead: true });
-      return res.json({ message: 'All marked as read' });
+    if (id === "all") {
+      await Notification.updateMany(
+        { userId: req.user.id, isRead: false },
+        { isRead: true },
+      );
+      return res.json({ message: "All marked as read" });
     }
     const notif = await Notification.findOneAndUpdate(
       { _id: id, userId: req.user.id },
       { isRead: true },
-      { new: true }
+      { new: true },
     );
-    if (!notif) return res.status(404).json({ message: 'Notification not found' });
+    if (!notif)
+      return res.status(404).json({ message: "Notification not found" });
     res.json(notif);
   } catch (error) {
-    res.status(200).json({ message: 'OK' });
+    console.error("markAsRead Error:", error);
+    res.status(500).json({ message: "Error marking notification as read" });
   }
 }
 
 async function deleteNotification(req, res) {
   try {
     const { id } = req.params;
-    if (id === 'all') {
+    if (id === "all") {
       await Notification.deleteMany({ userId: req.user.id });
-      return res.json({ message: 'All notifications deleted' });
+      return res.json({ message: "All notifications deleted" });
     }
-    const notif = await Notification.findOneAndDelete({ _id: id, userId: req.user.id });
-    if (!notif) return res.status(404).json({ message: 'Notification not found' });
-    res.json({ message: 'Deleted' });
+    const notif = await Notification.findOneAndDelete({
+      _id: id,
+      userId: req.user.id,
+    });
+    if (!notif)
+      return res.status(404).json({ message: "Notification not found" });
+    res.json({ message: "Deleted" });
   } catch (error) {
-    res.status(200).json({ message: 'OK' });
+    console.error("deleteNotification Error:", error);
+    res.status(500).json({ message: "Error deleting notification" });
   }
 }
 
 async function getUnreadCount(req, res) {
   try {
-    const count = await Notification.countDocuments({ userId: req.user.id, isRead: false });
+    const count = await Notification.countDocuments({
+      userId: req.user.id,
+      isRead: false,
+    });
     res.json({ count });
   } catch (error) {
     res.json({ count: 0 });
   }
 }
 
-module.exports = { getNotifications, markAsRead, deleteNotification, getUnreadCount };
+module.exports = {
+  getNotifications,
+  markAsRead,
+  deleteNotification,
+  getUnreadCount,
+};
