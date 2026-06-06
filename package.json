@@ -8,6 +8,7 @@
     "dev": "node server.js",
     "seed": "node scripts/seedData.js",
     "build:frontend": "cd frontend && npm run build",
+    "postinstall": "npm run build:frontend",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:unit": "jest tests/unit",
@@ -16,6 +17,9 @@
     "test:models": "jest tests/unit/models",
     "test:services": "jest tests/unit/services",
     "test:routes": "jest tests/integration/routes"
+  },
+  "engines": {
+	  "node": "22.x"
   },
   "keywords": [
     "studly",
@@ -37,14 +41,13 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.2.0",
-    "mongodb-memory-server-core": "^11.2.0",
-    "mongoose": "^9.5.0",
-    "nodemon": "^3.1.14"
+    "mongoose": "^9.5.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
     "jest": "^29.7.0",
-    "jest-mongodb": "^5.3.0",
+    "mongodb-memory-server-core": "^11.2.0",
+    "nodemon": "^3.1.14",
     "supertest": "^6.3.3"
   }
 }
