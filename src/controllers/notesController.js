@@ -1,39 +1,52 @@
-const Note = require('../models/Note');
-const aiEngine = require('../services/aiEngine');
+const Note = require("../models/Note");
+const aiEngine = require("../services/aiEngine");
 
 async function createNote(req, res) {
   try {
     const userId = req.user.id;
     const { topicId, content } = req.body;
 
-    // Auto-generate summary using AI
-    const summary = await aiEngine.summarizeNotes(content);
+    if (!topicId || !content) {
+      return res
+        .status(400)
+        .json({ message: "Topic ID and content are required" });
+    }
 
+    // Create note first to ensure data persistence
     const note = new Note({
       userId,
       topicId,
       content,
-      summary
     });
-
     await note.save();
+
+    // Generate summary asynchronously after save (non-blocking)
+    aiEngine
+      .summarizeNotes(content)
+      .then((summary) => {
+        note.summary = summary;
+        return note.save();
+      })
+      .catch((err) => console.error("Error updating note summary:", err));
+
     res.status(201).json(note);
   } catch (error) {
-    res.status(500).json({ message: 'Internal server error' });
+    console.error("createNote Error:", error);
+    res.status(500).json({ message: "Error creating note" });
   }
 }
 
 async function getUserNotes(req, res) {
   try {
     const userId = req.user.id;
-    const notes = await Note.find({ userId }).populate('topicId');
+    const notes = await Note.find({ userId }).populate("topicId");
     res.json(notes);
   } catch (error) {
-    res.status(500).json({ message: 'Internal server error' });
+    res.status(500).json({ message: "Internal server error" });
   }
 }
 
 module.exports = {
   createNote,
-  getUserNotes
+  getUserNotes,
 };
