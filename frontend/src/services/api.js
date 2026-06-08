@@ -58,6 +58,7 @@ export const quizApi = {
 // ─── Notes ───
 export const notesApi = {
   getAll: (token) => request('/notes', { token }),
+  getProvided: (token) => request('/notes/provided', { token }),
 };
 
 // ─── Planner ───

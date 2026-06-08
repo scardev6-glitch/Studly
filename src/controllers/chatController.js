@@ -1,6 +1,7 @@
+const mongoose = require('mongoose');
 const CommunityMessage = require('../models/CommunityMessage');
 const User = require('../models/User');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const aiEngine = require('../services/aiEngine');
 
 async function getMessages(req, res) {
   try {
@@ -101,40 +102,35 @@ async function askAI(req, res) {
       return res.status(400).json({ message: 'Please enter a question' });
     }
 
-    // Check AI credits
+    // Check AI credits (skip in offline mode)
+    const isOnline = typeof mongoose !== 'undefined' && mongoose.connection.readyState === 1;
     let user = null;
-    try { user = await User.findById(req.user.id); } catch (e) { /* offline */ }
-    const credits = user?.aiCredits ?? 0;
-    if (credits < 1) {
-      return res.json({
-        outOfCredits: true,
-        answer: '<p><strong>You\'ve run out of AI credits!</strong></p><p>Study more to earn points and refill your credits. Complete focus sessions, quizzes, and study sessions to earn XP and AI credits.</p><div style="margin-top:12px;padding:12px;background:var(--primary-bg);border-radius:var(--radius-sm);text-align:center"><p style="font-weight:600;color:var(--primary)">Study to earn 1 AI credit per 50 XP earned</p></div>'
-      });
-    }
-
-    // Deduct one credit
-    if (user) {
+    let credits = 5;
+    if (isOnline) {
+      try { user = await User.findById(req.user.id); } catch (e) { /* not found */ }
+      credits = user?.aiCredits ?? 0;
+      if (credits < 1) {
+        return res.json({
+          outOfCredits: true,
+          answer: '<p><strong>You\'ve run out of AI credits!</strong></p><p>Study more to earn points and refill your credits. Complete focus sessions, quizzes, and study sessions to earn XP and AI credits.</p><div style="margin-top:12px;padding:12px;background:var(--primary-bg);border-radius:var(--radius-sm);text-align:center"><p style="font-weight:600;color:var(--primary)">Study to earn 1 AI credit per 50 XP earned</p></div>'
+        });
+      }
+      // Deduct one credit
       user.aiCredits = Math.max(0, credits - 1);
       await user.save();
     }
-
-    if (!process.env.GEMINI_API_KEY) {
-      return res.json({
-        answer: '<p><strong>AI Tutor is not available right now.</strong></p><p>Please check back later or contact support if this persists.</p>',
-        creditsRemaining: user?.aiCredits ?? 0
-      });
-    }
-
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     const prompt = `You are an AI tutor for EGCSE Eswatini students. Answer the following question in a clear, helpful way. Use markdown formatting (headings, bold, lists) to structure your response. Be concise but thorough.
 
 Student question: ${message}`;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
+    const text = await aiEngine.generateText(prompt, 1024);
+    if (!text) {
+      return res.json({
+        answer: '<p><strong>AI Tutor is not available right now.</strong></p><p>Please check back later or contact support if this persists.</p>',
+        creditsRemaining: user?.aiCredits ?? 0
+      });
+    }
 
     const formatted = text
       .replace(/^###?\s(.+)$/gm, '<h4>$1</h4>')
@@ -144,7 +140,7 @@ Student question: ${message}`;
       .replace(/\n\n/g, '</p><p>')
       .replace(/\n/g, '<br>');
 
-    res.json({ answer: `<p>${formatted}</p>`, creditsRemaining: user?.aiCredits ?? 0 });
+    res.json({ answer: `<p>${formatted}</p>`, creditsRemaining: user?.aiCredits ?? (isOnline ? 0 : 5) });
   } catch (error) {
     console.error('AI Tutor Error:', error);
     res.json({

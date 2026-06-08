@@ -58,7 +58,8 @@ export default function AIPage() {
     setTyping(true);
     try {
       const data = await chatApi.ask(text, token);
-      const botMsg = { _id: (Date.now() + 1).toString(), role: 'assistant', content: data.response || data.message || 'Here is my response.', timestamp: new Date().toISOString() };
+      const botMsg = { _id: (Date.now() + 1).toString(), role: 'assistant', content: data.answer || 'Here is my response.', timestamp: new Date().toISOString() };
+      if (data.creditsRemaining !== undefined) setCredits(data.creditsRemaining);
       const final = [...updated, botMsg];
       setMessages(final);
       saveMessages(final);

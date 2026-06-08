@@ -5,5 +5,6 @@ const { protect } = require('../middleware/authMiddleware');
 
 router.post('/', protect, notesController.createNote);
 router.get('/', protect, notesController.getUserNotes);
+router.get('/provided', protect, notesController.getProvidedNotes);
 
 module.exports = router;

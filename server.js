@@ -10,8 +10,11 @@ const PORT = process.env.PORT || 3000;
 if (!process.env.JWT_SECRET || process.env.JWT_SECRET === 'your_super_secret_jwt_key_123') {
   console.warn('⚠️  WARNING: JWT_SECRET is weak or default. Set a strong random secret in production.');
 }
-if (!process.env.GEMINI_API_KEY) {
-  console.warn('⚠️  WARNING: GEMINI_API_KEY not set. AI features will use fallback responses.');
+const AI_KEY = process.env.OPENROUTER_API_KEY || process.env.OPENAI_API_KEY;
+if (!AI_KEY) {
+  console.warn('⚠️  WARNING: No AI API key set (OPENROUTER_API_KEY or OPENAI_API_KEY). AI features will use fallback responses.');
+} else {
+  console.log('✅  AI API key found — AI features enabled');
 }
 
 // Connect to Database (non-blocking)

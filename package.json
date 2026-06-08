@@ -19,7 +19,7 @@
     "test:routes": "jest tests/integration/routes"
   },
   "engines": {
-	  "node": "22.x"
+    "node": "22.x"
   },
   "keywords": [
     "studly",
@@ -30,7 +30,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
+    "@huggingface/inference": "^4.13.18",
     "bcryptjs": "^3.0.3",
     "compression": "^1.7.5",
     "cors": "^2.8.6",
@@ -41,7 +41,9 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.2.0",
-    "mongoose": "^9.5.0"
+    "mongoose": "^9.5.0",
+    "nodemailer": "^8.0.10",
+    "openai": "^6.42.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
