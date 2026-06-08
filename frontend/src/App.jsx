@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useApp } from './context/AppContext';
 import Loading from './components/common/Loading';
+import InstallPrompt from './components/common/InstallPrompt';
 
 // Lazy load pages
 const SplashPage = lazy(() => import('./pages/SplashPage'));
@@ -100,6 +101,7 @@ export default function App() {
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <InstallPrompt />
     </Suspense>
   );
 }

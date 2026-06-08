@@ -90,8 +90,30 @@ const frontendDist = path.join(__dirname, 'frontend', 'dist');
 const projectAssets = path.join(__dirname, '..', 'assets');
 
 if (SERVE_STATIC) {
+  // PWA service worker — never cache, always serve fresh
+  app.get('/sw.js', (req, res) => {
+    res.setHeader('Service-Worker-Allowed', '/');
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.sendFile(path.join(frontendDist, 'sw.js'));
+  });
+
+  // PWA manifest
+  app.get('/manifest.webmanifest', (req, res) => {
+    res.setHeader('Content-Type', 'application/manifest+json');
+    res.setHeader('Cache-Control', 'max-age=86400');
+    res.sendFile(path.join(frontendDist, 'manifest.webmanifest'));
+  });
+
   // 1) Frontend built assets (must come first to avoid asset path conflicts)
-  app.use(express.static(frontendDist));
+  app.use(express.static(frontendDist, {
+    setHeaders(res, filePath) {
+      if (filePath.endsWith('.html')) {
+        res.setHeader('Cache-Control', 'no-cache');
+      } else if (filePath.includes('/icons/') || filePath.includes('/assets/')) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      }
+    },
+  }));
 
   // 2) Project assets (videos, PDFs, syllabuses)
   app.use('/assets', express.static(projectAssets));
