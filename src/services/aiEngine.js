@@ -10,21 +10,39 @@ if (!API_KEY) {
 const genAI = API_KEY ? new GoogleGenerativeAI(API_KEY) : null;
 
 async function generateText(prompt, maxTokens = 512) {
-  try {
-    if (!genAI) return null;
+  if (!genAI) return null;
 
-    const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
-    });
+  const models = [
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-2.5-pro",
+  ];
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
+  for (const modelName of models) {
+    try {
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+      });
 
-    return response.text().trim();
-  } catch (error) {
-    console.error("Gemini API Error:", error);
-    return null;
+      const result = await model.generateContent({
+        contents: [
+          {
+            role: "user",
+            parts: [{ text: prompt }],
+          },
+        ],
+        generationConfig: {
+          maxOutputTokens: maxTokens,
+        },
+      });
+
+      return result.response.text().trim();
+    } catch (error) {
+      console.log(`Model ${modelName} failed`);
+    }
   }
+
+  return null;
 }
 
 // -----------------------------
