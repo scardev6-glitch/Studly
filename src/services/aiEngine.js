@@ -1,6 +1,6 @@
 const OpenAI = require("openai");
 
-const OR_KEY = process.env.OPENROUTER_API_KEY || "";
+const OR_KEY = process.env.GEMINI_API_KEY || "";
 const OA_KEY = process.env.OPENAI_API_KEY || "";
 const USE_OPENROUTER = !!OR_KEY;
 
