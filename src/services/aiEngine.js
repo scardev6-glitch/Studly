@@ -14,11 +14,12 @@ async function generateText(prompt, maxTokens = 512) {
     if (!genAI) return null;
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash",
     });
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
+
     return response.text().trim();
   } catch (error) {
     console.error("Gemini API Error:", error);
