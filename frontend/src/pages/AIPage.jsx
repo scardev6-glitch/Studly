@@ -154,7 +154,11 @@ export default function AIPage() {
                   lineHeight: 1.5,
                 }}
               >
-                <div style={{ whiteSpace: 'pre-wrap' }}>{msg.content}</div>
+                {msg.role === 'assistant' ? (
+                  <div style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: msg.content }} />
+                ) : (
+                  <div style={{ whiteSpace: 'pre-wrap' }}>{msg.content}</div>
+                )}
                 <div style={{ fontSize: '10px', marginTop: '4px', opacity: 0.7, textAlign: 'right' }}>{formatTime(msg.timestamp)}</div>
               </div>
             </div>

@@ -14,7 +14,7 @@ const openai = new OpenAI({
     },
   }),
 });
-const MODEL = USE_OPENROUTER ? "gryphe/mythomax-l2-13b" : "gpt-4o-mini";
+const MODEL = USE_OPENROUTER ? "openai/gpt-4o-mini" : "gpt-4o-mini";
 const API_KEY = OR_KEY || OA_KEY;
 
 async function generateText(prompt, maxTokens = 512) {

@@ -7,7 +7,7 @@
     "start": "node server.js",
     "dev": "node server.js",
     "seed": "node scripts/seedData.js",
-    "build:frontend": "cd frontend && npm run build",
+    "build:frontend": "cd frontend && npm install && npm run build",
     "postinstall": "npm run build:frontend",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
