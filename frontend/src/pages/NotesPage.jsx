@@ -42,9 +42,9 @@ export default function NotesPage() {
           notesApi.getAll(token),
           notesApi.getProvided(token),
         ]);
-        setNotes(data.notes || []);
+        setNotes(data || []);
         setProvidedNotes(provided || []);
-        if (!data.notes || data.notes.length === 0) {
+        if (!data || data.length === 0) {
           setViewMode('provided');
         }
       } catch {
