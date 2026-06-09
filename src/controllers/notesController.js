@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Note = require("../models/Note");
+const ProvidedNote = require("../models/ProvidedNote");
 const aiEngine = require("../services/aiEngine");
 
 const ASSETS_DIR = path.join(__dirname, '..', '..', '..', 'assets');
@@ -16,7 +17,6 @@ async function createNote(req, res) {
         .json({ message: "Topic ID and content are required" });
     }
 
-    // Create note first to ensure data persistence
     const note = new Note({
       userId,
       topicId,
@@ -24,7 +24,6 @@ async function createNote(req, res) {
     });
     await note.save();
 
-    // Generate summary asynchronously after save (non-blocking)
     aiEngine
       .summarizeNotes(content)
       .then((summary) => {
@@ -81,6 +80,28 @@ function parseSubject(filename) {
 
 async function getProvidedNotes(req, res) {
   try {
+    // Try MongoDB first (works on Heroku, Render, Fly.io, etc.)
+    const dbNotes = await ProvidedNote.find({}, {
+      _id: 1,
+      filename: 1,
+      subject: 1,
+      title: 1,
+      size: 1,
+    }).lean();
+
+    if (dbNotes.length > 0) {
+      const mapped = dbNotes.map((n) => ({
+        id: `provided-${n._id}`,
+        _id: n._id,
+        filename: n.filename,
+        subject: n.subject,
+        title: n.title,
+        url: `/api/notes/provided/${n._id}/pdf`,
+      }));
+      return res.json(mapped);
+    }
+
+    // Fallback: scan local filesystem (development)
     const dirs = ['NOTES', 'notes'];
     let allNotes = [];
     let id = 0;
@@ -109,8 +130,25 @@ async function getProvidedNotes(req, res) {
   }
 }
 
+async function getProvidedNotePdf(req, res) {
+  try {
+    const note = await ProvidedNote.findById(req.params.id).lean();
+    if (!note) {
+      return res.status(404).json({ message: "Note not found" });
+    }
+    res.set('Content-Type', 'application/pdf');
+    res.set('Content-Disposition', `inline; filename="${note.filename}"`);
+    res.set('Content-Length', note.size);
+    res.send(note.data);
+  } catch (error) {
+    console.error("getProvidedNotePdf Error:", error);
+    res.status(500).json({ message: "Error serving PDF" });
+  }
+}
+
 module.exports = {
   createNote,
   getUserNotes,
   getProvidedNotes,
+  getProvidedNotePdf,
 };
