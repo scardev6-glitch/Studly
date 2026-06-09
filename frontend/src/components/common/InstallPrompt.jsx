@@ -2,15 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 export default function InstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
-  const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
   const [installed, setInstalled] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handler = (e) => {
       e.preventDefault();
       setDeferredPrompt(e);
-      if (!dismissed) setVisible(true);
     };
 
     const installedHandler = () => {
@@ -24,13 +22,14 @@ export default function InstallPrompt() {
 
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setInstalled(true);
+      setVisible(false);
     }
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handler);
       window.removeEventListener('appinstalled', installedHandler);
     };
-  }, [dismissed]);
+  }, []);
 
   const handleInstall = async () => {
     if (!deferredPrompt) return;
@@ -40,6 +39,10 @@ export default function InstallPrompt() {
       setInstalled(true);
     }
     setDeferredPrompt(null);
+    setVisible(false);
+  };
+
+  const handleDismiss = () => {
     setVisible(false);
   };
 
@@ -87,7 +90,7 @@ export default function InstallPrompt() {
       </div>
       <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
         <button
-          onClick={() => { setVisible(false); setDismissed(true); }}
+          onClick={handleDismiss}
           style={{
             flex: 1,
             padding: '10px',
