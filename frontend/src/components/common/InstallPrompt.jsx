@@ -107,20 +107,24 @@ export default function InstallPrompt() {
         </button>
         <button
           onClick={handleInstall}
+          disabled={!deferredPrompt}
           style={{
             flex: 1,
             padding: '10px',
             borderRadius: 'var(--radius)',
             border: 'none',
-            background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))',
-            color: 'white',
+            background: deferredPrompt
+              ? 'linear-gradient(135deg, var(--primary), var(--primary-dark))'
+              : 'var(--bg-secondary)',
+            color: deferredPrompt ? 'white' : 'var(--text-muted)',
             fontSize: '13px',
             fontWeight: 600,
-            cursor: 'pointer',
-            boxShadow: '0 4px 14px rgba(99, 102, 241, 0.3)',
+            cursor: deferredPrompt ? 'pointer' : 'not-allowed',
+            boxShadow: deferredPrompt ? '0 4px 14px rgba(99, 102, 241, 0.3)' : 'none',
+            opacity: deferredPrompt ? 1 : 0.6,
           }}
         >
-          Install
+          {deferredPrompt ? 'Install' : 'Not available'}
         </button>
       </div>
     </div>
