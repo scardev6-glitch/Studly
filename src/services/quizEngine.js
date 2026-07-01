@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Question = require('../models/Question');
 const aiEngine = require('./aiEngine');
 const UserProgress = require('../models/UserProgress');
@@ -15,7 +16,7 @@ async function generateQuiz(userId, topicId, limit = 5) {
     if (aiQuestions) {
       // Mix with some database questions
       const dbQuestions = await Question.aggregate([
-        { $match: { topicId: new (require('mongoose').Types.ObjectId)(topicId) } },
+        { $match: { topicId: new mongoose.Types.ObjectId(topicId) } },
         { $sample: { size: Math.max(0, limit - aiQuestions.length) } }
       ]);
       return [...aiQuestions, ...dbQuestions];
@@ -24,7 +25,7 @@ async function generateQuiz(userId, topicId, limit = 5) {
 
   // Fallback to standard random selection
   const questions = await Question.aggregate([
-    { $match: { topicId: new (require('mongoose').Types.ObjectId)(topicId) } },
+    { $match: { topicId: new mongoose.Types.ObjectId(topicId) } },
     { $sample: { size: limit } }
   ]);
 

@@ -1,0 +1,173 @@
+{
+  "name": "History",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Ancient History",
+    "Modern History",
+    "African History",
+    "World Wars",
+    "Civil Rights",
+    "Cold War"
+  ],
+  "questions": [
+    {
+      "topic": "Ancient History",
+      "text": "First President of USA?",
+      "options": [
+        "Jefferson",
+        "Washington",
+        "Lincoln",
+        "Adams"
+      ],
+      "correct": 1,
+      "subtopic": "US History"
+    },
+    {
+      "topic": "Ancient History",
+      "text": "Ancient Egyptian writing?",
+      "options": [
+        "Cuneiform",
+        "Hieroglyphics",
+        "Latin",
+        "Greek"
+      ],
+      "correct": 1,
+      "subtopic": "Ancient Civilizations"
+    },
+    {
+      "topic": "Ancient History",
+      "text": "The Great Wall is in?",
+      "options": [
+        "India",
+        "China",
+        "Japan",
+        "Korea"
+      ],
+      "correct": 1,
+      "subtopic": "Ancient Civilizations"
+    },
+    {
+      "topic": "Modern History",
+      "text": "French Revolution year?",
+      "options": [
+        "1776",
+        "1789",
+        "1799",
+        "1804"
+      ],
+      "correct": 1,
+      "subtopic": "Revolutions"
+    },
+    {
+      "topic": "Modern History",
+      "text": "Industrial Revolution began in?",
+      "options": [
+        "France",
+        "Britain",
+        "Germany",
+        "USA"
+      ],
+      "correct": 1,
+      "subtopic": "Industrial Revolution"
+    },
+    {
+      "topic": "African History",
+      "text": "Apartheid ended in?",
+      "options": [
+        "1990",
+        "1994",
+        "1989",
+        "1996"
+      ],
+      "correct": 1,
+      "subtopic": "South Africa"
+    },
+    {
+      "topic": "African History",
+      "text": "Scramble for Africa was in?",
+      "options": [
+        "18th century",
+        "19th century",
+        "20th century",
+        "17th century"
+      ],
+      "correct": 1,
+      "subtopic": "Colonialism"
+    },
+    {
+      "topic": "African History",
+      "text": "Eswatini independence year?",
+      "options": [
+        "1968",
+        "1970",
+        "1965",
+        "1975"
+      ],
+      "correct": 0,
+      "subtopic": "Eswatini History"
+    },
+    {
+      "topic": "World Wars",
+      "text": "WWI started in?",
+      "options": [
+        "1912",
+        "1914",
+        "1916",
+        "1918"
+      ],
+      "correct": 1,
+      "subtopic": "World War I"
+    },
+    {
+      "topic": "World Wars",
+      "text": "WWII ended in?",
+      "options": [
+        "1943",
+        "1945",
+        "1947",
+        "1949"
+      ],
+      "correct": 1,
+      "subtopic": "World War II"
+    },
+    {
+      "topic": "Civil Rights",
+      "text": "Martin Luther King Jr. was?",
+      "options": [
+        "President",
+        "Civil rights leader",
+        "General",
+        "Writer"
+      ],
+      "correct": 1,
+      "subtopic": "Civil Rights"
+    },
+    {
+      "topic": "Cold War",
+      "text": "Superpowers in Cold War?",
+      "options": [
+        "USA and China",
+        "USA and USSR",
+        "UK and France",
+        "Germany and Japan"
+      ],
+      "correct": 1,
+      "subtopic": "Cold War"
+    },
+    {
+      "topic": "Cold War",
+      "text": "Berlin Wall fell in?",
+      "options": [
+        "1987",
+        "1989",
+        "1991",
+        "1985"
+      ],
+      "correct": 1,
+      "subtopic": "Cold War"
+    }
+  ]
+}

@@ -126,21 +126,15 @@ async function getSubjectProgress(req, res) {
 async function getGameStats(req, res) {
   try {
     const user = await User.findById(req.user.id);
-    if (!user)
-      return res.json({
-        level: 1,
-        totalXp: 0,
-        aiCredits: 5,
-        points: 0,
-        nextLevelXp: 100,
-        currentLevelXp: 0,
-      });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
 
     const totalXp = user.totalXp || 0;
     const level = user.gamificationLevel || 1;
 
-    // Calculate XP thresholds based on gamification engine cumulative formula
-    // Level N requires N * 100 XP accumulated from previous levels
+    // Calculate XP thresholds based on gamification engine formula
+    // Level = floor(XP / 100) + 1
     const nextLevelXp = level * 100;
     const prevLevelXp = (level - 1) * 100;
     const currentLevelXp = totalXp - prevLevelXp;
@@ -159,15 +153,7 @@ async function getGameStats(req, res) {
     });
   } catch (error) {
     console.error("getGameStats Error:", error.message);
-    res.json({
-      level: 1,
-      totalXp: 0,
-      aiCredits: 5,
-      points: 0,
-      nextLevelXp: 100,
-      currentLevelXp: 0,
-      xpProgress: 0,
-    });
+    res.status(500).json({ message: 'Internal server error' });
   }
 }
 

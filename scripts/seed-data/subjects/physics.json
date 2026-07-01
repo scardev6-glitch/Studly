@@ -1,0 +1,307 @@
+{
+  "name": "Physics",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Mechanics",
+    "Waves",
+    "Electricity",
+    "Thermodynamics",
+    "Modern Physics",
+    "Magnetism",
+    "Nuclear Physics",
+    "Optics"
+  ],
+  "questions": [
+    {
+      "topic": "Mechanics",
+      "text": "Newton's first law?",
+      "options": [
+        "F=ma",
+        "Rest until acted upon",
+        "Action = reaction",
+        "Energy conserved"
+      ],
+      "correct": 1,
+      "subtopic": "Newton's Laws"
+    },
+    {
+      "topic": "Mechanics",
+      "text": "Speed = ?",
+      "options": [
+        "Distance × time",
+        "Distance / time",
+        "Time / distance",
+        "Acceleration × time"
+      ],
+      "correct": 1,
+      "subtopic": "Kinematics"
+    },
+    {
+      "topic": "Mechanics",
+      "text": "Unit of force?",
+      "options": [
+        "Joule",
+        "Newton",
+        "Watt",
+        "Pascal"
+      ],
+      "correct": 1,
+      "subtopic": "Forces"
+    },
+    {
+      "topic": "Mechanics",
+      "text": "Momentum = ?",
+      "options": [
+        "Mass × velocity",
+        "Mass × acceleration",
+        "Force × time",
+        "Weight × speed"
+      ],
+      "correct": 0,
+      "subtopic": "Momentum"
+    },
+    {
+      "topic": "Mechanics",
+      "text": "Gravitational field strength on Earth?",
+      "options": [
+        "5.8 N/kg",
+        "9.8 N/kg",
+        "12.6 N/kg",
+        "7.2 N/kg"
+      ],
+      "correct": 1,
+      "subtopic": "Gravity"
+    },
+    {
+      "topic": "Waves",
+      "text": "Speed of light?",
+      "options": [
+        "300,000 m/s",
+        "3,000 m/s",
+        "300,000 km/s",
+        "30,000 m/s"
+      ],
+      "correct": 2,
+      "subtopic": "Light"
+    },
+    {
+      "topic": "Waves",
+      "text": "Frequency unit is?",
+      "options": [
+        "Ampere",
+        "Hertz",
+        "Volt",
+        "Watt"
+      ],
+      "correct": 1,
+      "subtopic": "Wave Properties"
+    },
+    {
+      "topic": "Waves",
+      "text": "Sound waves are?",
+      "options": [
+        "Transverse",
+        "Longitudinal",
+        "Electromagnetic",
+        "Stationary"
+      ],
+      "correct": 1,
+      "subtopic": "Sound"
+    },
+    {
+      "topic": "Waves",
+      "text": "Wavelength × frequency = ?",
+      "options": [
+        "Speed",
+        "Amplitude",
+        "Energy",
+        "Power"
+      ],
+      "correct": 0,
+      "subtopic": "Wave Equation"
+    },
+    {
+      "topic": "Optics",
+      "text": "Concave lens?",
+      "options": [
+        "Converges light",
+        "Diverges light",
+        "No effect",
+        "Reflects light"
+      ],
+      "correct": 1,
+      "subtopic": "Lenses"
+    },
+    {
+      "topic": "Optics",
+      "text": "Angle of incidence = ?",
+      "options": [
+        "Angle of reflection",
+        "Angle of refraction",
+        "90°",
+        "0°"
+      ],
+      "correct": 0,
+      "subtopic": "Reflection"
+    },
+    {
+      "topic": "Electricity",
+      "text": "Ohm's law: V = I × ?",
+      "options": [
+        "P",
+        "R",
+        "C",
+        "F"
+      ],
+      "correct": 1,
+      "subtopic": "Circuits"
+    },
+    {
+      "topic": "Electricity",
+      "text": "Series circuit current is?",
+      "options": [
+        "Divided",
+        "Same everywhere",
+        "Zero",
+        "Doubled"
+      ],
+      "correct": 1,
+      "subtopic": "Series Circuits"
+    },
+    {
+      "topic": "Electricity",
+      "text": "Unit of power?",
+      "options": [
+        "Joule",
+        "Watt",
+        "Volt",
+        "Ampere"
+      ],
+      "correct": 1,
+      "subtopic": "Power"
+    },
+    {
+      "topic": "Electricity",
+      "text": "Resistance of a wire depends on?",
+      "options": [
+        "Length, area, material",
+        "Only length",
+        "Only material",
+        "Only voltage"
+      ],
+      "correct": 0,
+      "subtopic": "Resistance"
+    },
+    {
+      "topic": "Magnetism",
+      "text": "Like poles?",
+      "options": [
+        "Attract",
+        "Repel",
+        "Neutral",
+        "Combine"
+      ],
+      "correct": 1,
+      "subtopic": "Magnetic Fields"
+    },
+    {
+      "topic": "Magnetism",
+      "text": "Electromagnet uses?",
+      "options": [
+        "Permanent magnet",
+        "Current-carrying coil",
+        "Static charge",
+        "Heat"
+      ],
+      "correct": 1,
+      "subtopic": "Electromagnetism"
+    },
+    {
+      "topic": "Thermodynamics",
+      "text": "Absolute zero?",
+      "options": [
+        "0°C",
+        "-273°C",
+        "100°C",
+        "-100°C"
+      ],
+      "correct": 1,
+      "subtopic": "Temperature"
+    },
+    {
+      "topic": "Thermodynamics",
+      "text": "Heat transfer by movement of fluid?",
+      "options": [
+        "Conduction",
+        "Convection",
+        "Radiation",
+        "Evaporation"
+      ],
+      "correct": 1,
+      "subtopic": "Heat Transfer"
+    },
+    {
+      "topic": "Thermodynamics",
+      "text": "Specific heat capacity unit?",
+      "options": [
+        "J/kg°C",
+        "J/g",
+        "W/m²",
+        "N/m²"
+      ],
+      "correct": 0,
+      "subtopic": "Thermal Properties"
+    },
+    {
+      "topic": "Nuclear Physics",
+      "text": "Alpha particle is?",
+      "options": [
+        "Electron",
+        "Helium nucleus",
+        "Proton",
+        "Neutron"
+      ],
+      "correct": 1,
+      "subtopic": "Radioactivity"
+    },
+    {
+      "topic": "Nuclear Physics",
+      "text": "Half-life is?",
+      "options": [
+        "Total decay time",
+        "Time for half to decay",
+        "Time to fully decay",
+        "Double the decay time"
+      ],
+      "correct": 1,
+      "subtopic": "Half-life"
+    },
+    {
+      "topic": "Modern Physics",
+      "text": "Einstein's equation?",
+      "options": [
+        "E=hf",
+        "E=mc²",
+        "F=ma",
+        "V=IR"
+      ],
+      "correct": 1,
+      "subtopic": "Relativity"
+    },
+    {
+      "topic": "Modern Physics",
+      "text": "Photoelectric effect shows?",
+      "options": [
+        "Wave nature",
+        "Particle nature",
+        "Both",
+        "Neither"
+      ],
+      "correct": 1,
+      "subtopic": "Quantum"
+    }
+  ]
+}

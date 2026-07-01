@@ -1,0 +1,160 @@
+{
+  "name": "Economics",
+  "levels": [
+    "egcse"
+  ],
+  "topics": [
+    "Microeconomics",
+    "Macroeconomics",
+    "Markets",
+    "Trade",
+    "Development",
+    "Money & Banking"
+  ],
+  "questions": [
+    {
+      "topic": "Microeconomics",
+      "text": "Supply and demand determine?",
+      "options": [
+        "Inflation",
+        "Price",
+        "Unemployment",
+        "Growth"
+      ],
+      "correct": 1,
+      "subtopic": "Markets"
+    },
+    {
+      "topic": "Microeconomics",
+      "text": "Opportunity cost is?",
+      "options": [
+        "Money cost",
+        "Next best alternative foregone",
+        "Total cost",
+        "Sunk cost"
+      ],
+      "correct": 1,
+      "subtopic": "Basic Concepts"
+    },
+    {
+      "topic": "Microeconomics",
+      "text": "Law of demand states?",
+      "options": [
+        "Price up, demand up",
+        "Price up, demand down",
+        "No relationship",
+        "Demand is constant"
+      ],
+      "correct": 1,
+      "subtopic": "Demand"
+    },
+    {
+      "topic": "Microeconomics",
+      "text": "Elastic demand means?",
+      "options": [
+        "Sensitive to price",
+        "Insensitive to price",
+        "Fixed quantity",
+        "No substitutes"
+      ],
+      "correct": 0,
+      "subtopic": "Elasticity"
+    },
+    {
+      "topic": "Macroeconomics",
+      "text": "GDP measures?",
+      "options": [
+        "Population",
+        "Economic output",
+        "Price level",
+        "Employment"
+      ],
+      "correct": 1,
+      "subtopic": "National Income"
+    },
+    {
+      "topic": "Macroeconomics",
+      "text": "Inflation is?",
+      "options": [
+        "Falling prices",
+        "Rising prices",
+        "Stable prices",
+        "Zero prices"
+      ],
+      "correct": 1,
+      "subtopic": "Inflation"
+    },
+    {
+      "topic": "Macroeconomics",
+      "text": "Unemployment means?",
+      "options": [
+        "No jobs available",
+        "People willing but no work",
+        "Retired people",
+        "Students"
+      ],
+      "correct": 1,
+      "subtopic": "Unemployment"
+    },
+    {
+      "topic": "Money & Banking",
+      "text": "Central bank controls?",
+      "options": [
+        "Interest rates",
+        "Tax rates",
+        "Government spending",
+        "Trade policy"
+      ],
+      "correct": 0,
+      "subtopic": "Central Banking"
+    },
+    {
+      "topic": "Money & Banking",
+      "text": "Commercial banks?",
+      "options": [
+        "Print money",
+        "Accept deposits, give loans",
+        "Set tax rates",
+        "Control inflation"
+      ],
+      "correct": 1,
+      "subtopic": "Banking"
+    },
+    {
+      "topic": "Trade",
+      "text": "Exports - Imports = ?",
+      "options": [
+        "GDP",
+        "Trade balance",
+        "Inflation",
+        "National debt"
+      ],
+      "correct": 1,
+      "subtopic": "Trade Balance"
+    },
+    {
+      "topic": "Trade",
+      "text": "Free trade means?",
+      "options": [
+        "No barriers",
+        "High tariffs",
+        "Quotas",
+        "Subsidies"
+      ],
+      "correct": 0,
+      "subtopic": "Trade Policy"
+    },
+    {
+      "topic": "Development",
+      "text": "HDI includes?",
+      "options": [
+        "Income, education, health",
+        "Income only",
+        "Education only",
+        "GDP only"
+      ],
+      "correct": 0,
+      "subtopic": "Development Indicators"
+    }
+  ]
+}

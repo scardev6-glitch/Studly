@@ -1,0 +1,294 @@
+{
+  "name": "ICT",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Systems",
+    "Networks",
+    "Programming",
+    "Databases",
+    "Security",
+    "Web Design",
+    "Spreadsheets"
+  ],
+  "questions": [
+    {
+      "topic": "Systems",
+      "text": "RAM is?",
+      "options": [
+        "Read-Only",
+        "Random Access",
+        "Rapid Access",
+        "Rewritable"
+      ],
+      "correct": 1,
+      "subtopic": "Memory"
+    },
+    {
+      "topic": "Systems",
+      "text": "CPU stands for?",
+      "options": [
+        "Central Processing Unit",
+        "Computer Personal Unit",
+        "Central Program Unit",
+        "Core Processing Unit"
+      ],
+      "correct": 0,
+      "subtopic": "Hardware"
+    },
+    {
+      "topic": "Systems",
+      "text": "Storage capacity of a DVD?",
+      "options": [
+        "700 MB",
+        "4.7 GB",
+        "8.5 GB",
+        "25 GB"
+      ],
+      "correct": 1,
+      "subtopic": "Storage"
+    },
+    {
+      "topic": "Systems",
+      "text": "An operating system is?",
+      "options": [
+        "Hardware",
+        "Software",
+        "Firmware",
+        "Malware"
+      ],
+      "correct": 1,
+      "subtopic": "Software"
+    },
+    {
+      "topic": "Systems",
+      "text": "Binary system uses base?",
+      "options": [
+        "8",
+        "10",
+        "2",
+        "16"
+      ],
+      "correct": 2,
+      "subtopic": "Data Representation"
+    },
+    {
+      "topic": "Networks",
+      "text": "HTTP stands for?",
+      "options": [
+        "Hypertext Transfer",
+        "High Transfer Text",
+        "Home Transfer",
+        "Hypertext Transmission"
+      ],
+      "correct": 0,
+      "subtopic": "Protocols"
+    },
+    {
+      "topic": "Networks",
+      "text": "IP address is?",
+      "options": [
+        "Website name",
+        "Device identifier",
+        "Password",
+        "File name"
+      ],
+      "correct": 1,
+      "subtopic": "Addressing"
+    },
+    {
+      "topic": "Networks",
+      "text": "LAN covers?",
+      "options": [
+        "Large area",
+        "Small area",
+        "Worldwide",
+        "Country"
+      ],
+      "correct": 1,
+      "subtopic": "Network Types"
+    },
+    {
+      "topic": "Networks",
+      "text": "WiFi is a?",
+      "options": [
+        "Cable standard",
+        "Wireless standard",
+        "Security protocol",
+        "File format"
+      ],
+      "correct": 1,
+      "subtopic": "Wireless"
+    },
+    {
+      "topic": "Security",
+      "text": "Firewall is?",
+      "options": [
+        "Wall on fire",
+        "Security system",
+        "Malware",
+        "Anti-virus"
+      ],
+      "correct": 1,
+      "subtopic": "Security Basics"
+    },
+    {
+      "topic": "Security",
+      "text": "Phishing is?",
+      "options": [
+        "Fishing game",
+        "Fake login scam",
+        "Virus type",
+        "Firewall type"
+      ],
+      "correct": 1,
+      "subtopic": "Cyber Threats"
+    },
+    {
+      "topic": "Security",
+      "text": "Encryption does what?",
+      "options": [
+        "Deletes data",
+        "Scrambles data",
+        "Copies data",
+        "Speeds up data"
+      ],
+      "correct": 1,
+      "subtopic": "Encryption"
+    },
+    {
+      "topic": "Databases",
+      "text": "Primary key is?",
+      "options": [
+        "Password",
+        "Unique identifier",
+        "Table name",
+        "Query type"
+      ],
+      "correct": 1,
+      "subtopic": "Keys"
+    },
+    {
+      "topic": "Databases",
+      "text": "SQL is used for?",
+      "options": [
+        "Design",
+        "Querying databases",
+        "Programming",
+        "Networking"
+      ],
+      "correct": 1,
+      "subtopic": "SQL"
+    },
+    {
+      "topic": "Databases",
+      "text": "A table contains?",
+      "options": [
+        "Rows and columns",
+        "Only rows",
+        "Only columns",
+        "Documents"
+      ],
+      "correct": 0,
+      "subtopic": "Tables"
+    },
+    {
+      "topic": "Programming",
+      "text": "Algorithm is?",
+      "options": [
+        "A program",
+        "Step-by-step instructions",
+        "Variable",
+        "Function"
+      ],
+      "correct": 1,
+      "subtopic": "Algorithms"
+    },
+    {
+      "topic": "Programming",
+      "text": "Loop repeats?",
+      "options": [
+        "Code block",
+        "Variable",
+        "Function",
+        "Array"
+      ],
+      "correct": 0,
+      "subtopic": "Control Structures"
+    },
+    {
+      "topic": "Programming",
+      "text": "Variable stores?",
+      "options": [
+        "Data",
+        "Functions",
+        "Code",
+        "Comments"
+      ],
+      "correct": 0,
+      "subtopic": "Variables"
+    },
+    {
+      "topic": "Programming",
+      "text": "IF statement is for?",
+      "options": [
+        "Loops",
+        "Decisions",
+        "Storage",
+        "Output"
+      ],
+      "correct": 1,
+      "subtopic": "Conditionals"
+    },
+    {
+      "topic": "Spreadsheets",
+      "text": "SUM function does?",
+      "options": [
+        "Averages",
+        "Adds numbers",
+        "Counts cells",
+        "Finds max"
+      ],
+      "correct": 1,
+      "subtopic": "Formulas"
+    },
+    {
+      "topic": "Spreadsheets",
+      "text": "A cell reference A1 means?",
+      "options": [
+        "Column A, Row 1",
+        "Row A, Column 1",
+        "Sheet A, Cell 1",
+        "Table A, Row 1"
+      ],
+      "correct": 0,
+      "subtopic": "Cell References"
+    },
+    {
+      "topic": "Web Design",
+      "text": "HTML stands for?",
+      "options": [
+        "HyperText Markup Language",
+        "High Tech Modern Language",
+        "HyperText Modern Links",
+        "Home Tool Markup Language"
+      ],
+      "correct": 0,
+      "subtopic": "HTML"
+    },
+    {
+      "topic": "Web Design",
+      "text": "CSS is used for?",
+      "options": [
+        "Structure",
+        "Styling",
+        "Logic",
+        "Database"
+      ],
+      "correct": 1,
+      "subtopic": "CSS"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const StudyPlan = require('../models/StudyPlan');
 const UserProgress = require('../models/UserProgress');
 const Topic = require('../models/Topic');
@@ -51,7 +52,7 @@ async function generateDailyPlan(userId, availableTime) {
         if (adjustedDuration < 10) continue; // Skip if less than 10 mins remaining
       }
 
-      const goalId = new (require('mongoose')).Types.ObjectId();
+      const goalId = new mongoose.Types.ObjectId();
       dailyGoals.push({
         _id: goalId,
         subject: topic.subject,

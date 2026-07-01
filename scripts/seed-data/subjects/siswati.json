@@ -1,0 +1,112 @@
+{
+  "name": "Siswati",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Grammar",
+    "Vocabulary",
+    "Comprehension",
+    "Writing",
+    "Oral Skills"
+  ],
+  "questions": [
+    {
+      "topic": "Grammar",
+      "text": "Siswati is spoken in?",
+      "options": [
+        "Kenya",
+        "Eswatini",
+        "South Africa",
+        "Botswana"
+      ],
+      "correct": 1,
+      "subtopic": "Language Origins"
+    },
+    {
+      "topic": "Grammar",
+      "text": "Inhloko yemusho?",
+      "options": [
+        "Subject",
+        "Verb",
+        "Object",
+        "Adjective"
+      ],
+      "correct": 0,
+      "subtopic": "Sentence Structure"
+    },
+    {
+      "topic": "Grammar",
+      "text": "Bu- prefix indicates?",
+      "options": [
+        "Singular",
+        "Plural",
+        "Abstract nouns",
+        "Verbs"
+      ],
+      "correct": 2,
+      "subtopic": "Prefixes"
+    },
+    {
+      "topic": "Vocabulary",
+      "text": "\"Kuhamba\" means?",
+      "options": [
+        "To eat",
+        "To walk",
+        "To sleep",
+        "To read"
+      ],
+      "correct": 1,
+      "subtopic": "Verbs"
+    },
+    {
+      "topic": "Vocabulary",
+      "text": "\"Lilanga\" means?",
+      "options": [
+        "Moon",
+        "Sun",
+        "Star",
+        "Cloud"
+      ],
+      "correct": 1,
+      "subtopic": "Nouns"
+    },
+    {
+      "topic": "Comprehension",
+      "text": "Kufundza lokuhle kusho?",
+      "options": [
+        "Speed reading",
+        "Reading comprehension",
+        "Writing",
+        "Speaking"
+      ],
+      "correct": 1,
+      "subtopic": "Reading Skills"
+    },
+    {
+      "topic": "Writing",
+      "text": "Incwadzi yemtsetfo?",
+      "options": [
+        "Informal letter",
+        "Formal letter",
+        "Poem",
+        "Essay"
+      ],
+      "correct": 1,
+      "subtopic": "Letter Writing"
+    },
+    {
+      "topic": "Oral Skills",
+      "text": "Kukhuluma emphakatfini?",
+      "options": [
+        "Private talk",
+        "Public speaking",
+        "Whispering",
+        "Singing"
+      ],
+      "correct": 1,
+      "subtopic": "Speech"
+    }
+  ]
+}

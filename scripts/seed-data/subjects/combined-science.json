@@ -1,0 +1,149 @@
+{
+  "name": "Combined Science",
+  "levels": [
+    "jc"
+  ],
+  "topics": [
+    "Scientific Method",
+    "Cells",
+    "Energy",
+    "Forces",
+    "Materials",
+    "Chemical Reactions",
+    "Ecosystems"
+  ],
+  "questions": [
+    {
+      "topic": "Scientific Method",
+      "text": "First step in scientific method?",
+      "options": [
+        "Experiment",
+        "Observation/question",
+        "Conclusion",
+        "Hypothesis"
+      ],
+      "correct": 1,
+      "subtopic": "Scientific Process"
+    },
+    {
+      "topic": "Cells",
+      "text": "Basic unit of life is?",
+      "options": [
+        "Tissue",
+        "Cell",
+        "Organ",
+        "Organism"
+      ],
+      "correct": 1,
+      "subtopic": "Cell Theory"
+    },
+    {
+      "topic": "Cells",
+      "text": "Plant cells have?",
+      "options": [
+        "Cell wall",
+        "No nucleus",
+        "No mitochondria",
+        "Flagella"
+      ],
+      "correct": 0,
+      "subtopic": "Cell Types"
+    },
+    {
+      "topic": "Energy",
+      "text": "Energy cannot be?",
+      "options": [
+        "Transformed",
+        "Created or destroyed",
+        "Stored",
+        "Transferred"
+      ],
+      "correct": 1,
+      "subtopic": "Energy Conservation"
+    },
+    {
+      "topic": "Energy",
+      "text": "Kinetic energy depends on?",
+      "options": [
+        "Mass and speed",
+        "Height only",
+        "Temperature",
+        "Pressure"
+      ],
+      "correct": 0,
+      "subtopic": "Energy Forms"
+    },
+    {
+      "topic": "Forces",
+      "text": "Friction always?",
+      "options": [
+        "Helps motion",
+        "Opposes motion",
+        "Creates motion",
+        "Ignores motion"
+      ],
+      "correct": 1,
+      "subtopic": "Forces"
+    },
+    {
+      "topic": "Forces",
+      "text": "Weight = ?",
+      "options": [
+        "Mass × gravity",
+        "Mass ÷ gravity",
+        "Gravity ÷ mass",
+        "Mass + gravity"
+      ],
+      "correct": 0,
+      "subtopic": "Forces"
+    },
+    {
+      "topic": "Materials",
+      "text": "Density = ?",
+      "options": [
+        "Mass × volume",
+        "Mass / volume",
+        "Volume / mass",
+        "Mass + volume"
+      ],
+      "correct": 1,
+      "subtopic": "Properties"
+    },
+    {
+      "topic": "Materials",
+      "text": "Conductors allow?",
+      "options": [
+        "Heat/electricity flow",
+        "Light through",
+        "Sound through",
+        "Water through"
+      ],
+      "correct": 0,
+      "subtopic": "Materials"
+    },
+    {
+      "topic": "Chemical Reactions",
+      "text": "Reactants become?",
+      "options": [
+        "Products",
+        "Elements",
+        "Mixtures",
+        "Compounds"
+      ],
+      "correct": 0,
+      "subtopic": "Reactions"
+    },
+    {
+      "topic": "Ecosystems",
+      "text": "Food chain starts with?",
+      "options": [
+        "Herbivore",
+        "Producer",
+        "Carnivore",
+        "Decomposer"
+      ],
+      "correct": 1,
+      "subtopic": "Ecology"
+    }
+  ]
+}

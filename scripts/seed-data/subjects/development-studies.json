@@ -1,0 +1,136 @@
+{
+  "name": "Development Studies",
+  "levels": [
+    "egcse"
+  ],
+  "topics": [
+    "Poverty",
+    "Health",
+    "Education",
+    "Sustainability",
+    "Globalization",
+    "Human Rights"
+  ],
+  "questions": [
+    {
+      "topic": "Poverty",
+      "text": "Absolute poverty means?",
+      "options": [
+        "Lack of basic needs",
+        "Low income relative to others",
+        "No car",
+        "No phone"
+      ],
+      "correct": 0,
+      "subtopic": "Poverty Definition"
+    },
+    {
+      "topic": "Poverty",
+      "text": "Poverty cycle is?",
+      "options": [
+        "Wealth creation",
+        "Self-reinforcing poverty",
+        "Economic growth",
+        "Income distribution"
+      ],
+      "correct": 1,
+      "subtopic": "Poverty Cycle"
+    },
+    {
+      "topic": "Health",
+      "text": "Infant mortality rate is?",
+      "options": [
+        "Deaths under 1 year per 1000",
+        "Deaths under 5 per 1000",
+        "Maternal deaths",
+        "Total deaths"
+      ],
+      "correct": 0,
+      "subtopic": "Health Indicators"
+    },
+    {
+      "topic": "Health",
+      "text": "MDGs were replaced by?",
+      "options": [
+        "SDGs",
+        "HDI",
+        "GDP",
+        "NGOs"
+      ],
+      "correct": 0,
+      "subtopic": "Development Goals"
+    },
+    {
+      "topic": "Education",
+      "text": "Literacy rate measures?",
+      "options": [
+        "School enrollment",
+        "Ability to read/write",
+        "Years of schooling",
+        "University graduates"
+      ],
+      "correct": 1,
+      "subtopic": "Education Indicators"
+    },
+    {
+      "topic": "Education",
+      "text": "Primary education is?",
+      "options": [
+        "Optional",
+        "A human right",
+        "For adults",
+        "Only for boys"
+      ],
+      "correct": 1,
+      "subtopic": "Education Rights"
+    },
+    {
+      "topic": "Sustainability",
+      "text": "Sustainable development means?",
+      "options": [
+        "Meeting present needs without compromising future",
+        "Fast economic growth",
+        "Industrialization",
+        "Population control"
+      ],
+      "correct": 0,
+      "subtopic": "Sustainability"
+    },
+    {
+      "topic": "Sustainability",
+      "text": "Renewable energy includes?",
+      "options": [
+        "Coal",
+        "Solar",
+        "Oil",
+        "Nuclear"
+      ],
+      "correct": 1,
+      "subtopic": "Energy"
+    },
+    {
+      "topic": "Globalization",
+      "text": "Globalization increases?",
+      "options": [
+        "Isolation",
+        "Interconnectedness",
+        "Tariffs",
+        "Trade barriers"
+      ],
+      "correct": 1,
+      "subtopic": "Globalization"
+    },
+    {
+      "topic": "Human Rights",
+      "text": "UDHR stands for?",
+      "options": [
+        "Universal Declaration of Human Rights",
+        "United Democratic Human Rights",
+        "Universal Democratic Human Rights",
+        "United Declaration of Human Rights"
+      ],
+      "correct": 0,
+      "subtopic": "Human Rights"
+    }
+  ]
+}

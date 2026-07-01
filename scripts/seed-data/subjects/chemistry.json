@@ -1,0 +1,295 @@
+{
+  "name": "Chemistry",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Atomic Structure",
+    "Bonding",
+    "Reactions",
+    "Acids & Bases",
+    "Organic Chemistry",
+    "Periodic Table",
+    "Electrochemistry",
+    "Kinetics"
+  ],
+  "questions": [
+    {
+      "topic": "Atomic Structure",
+      "text": "Charge of a proton?",
+      "options": [
+        "Negative",
+        "Positive",
+        "Neutral",
+        "Variable"
+      ],
+      "correct": 1,
+      "subtopic": "Subatomic Particles"
+    },
+    {
+      "topic": "Atomic Structure",
+      "text": "Atomic number equals number of?",
+      "options": [
+        "Neutrons",
+        "Protons",
+        "Electrons + neutrons",
+        "Nucleons"
+      ],
+      "correct": 1,
+      "subtopic": "Atomic Number"
+    },
+    {
+      "topic": "Atomic Structure",
+      "text": "Isotopes have same number of?",
+      "options": [
+        "Neutrons",
+        "Protons",
+        "Electrons",
+        "Nucleons"
+      ],
+      "correct": 1,
+      "subtopic": "Isotopes"
+    },
+    {
+      "topic": "Atomic Structure",
+      "text": "Electrons orbit in?",
+      "options": [
+        "Nucleus",
+        "Shells",
+        "Random paths",
+        "Straight lines"
+      ],
+      "correct": 1,
+      "subtopic": "Electron Configuration"
+    },
+    {
+      "topic": "Bonding",
+      "text": "Ionic bond between?",
+      "options": [
+        "Two nonmetals",
+        "Two metals",
+        "Metal and nonmetal",
+        "Same atoms"
+      ],
+      "correct": 2,
+      "subtopic": "Chemical Bonds"
+    },
+    {
+      "topic": "Bonding",
+      "text": "Covalent bonds share?",
+      "options": [
+        "Protons",
+        "Electrons",
+        "Neutrons",
+        "Ions"
+      ],
+      "correct": 1,
+      "subtopic": "Covalent Bonding"
+    },
+    {
+      "topic": "Bonding",
+      "text": "Water molecule is?",
+      "options": [
+        "Linear",
+        "Bent",
+        "Trigonal planar",
+        "Tetrahedral"
+      ],
+      "correct": 1,
+      "subtopic": "Molecular Shapes"
+    },
+    {
+      "topic": "Reactions",
+      "text": "Combustion requires?",
+      "options": [
+        "Heat only",
+        "Fuel and oxygen",
+        "Pressure",
+        "Light"
+      ],
+      "correct": 1,
+      "subtopic": "Reaction Types"
+    },
+    {
+      "topic": "Reactions",
+      "text": "Exothermic reactions?",
+      "options": [
+        "Absorb heat",
+        "Release heat",
+        "Need catalyst",
+        "Are always fast"
+      ],
+      "correct": 1,
+      "subtopic": "Energy Changes"
+    },
+    {
+      "topic": "Reactions",
+      "text": "Catalyst speeds up reaction by?",
+      "options": [
+        "Increasing temperature",
+        "Lowering activation energy",
+        "Adding reactants",
+        "Increasing pressure"
+      ],
+      "correct": 1,
+      "subtopic": "Catalysis"
+    },
+    {
+      "topic": "Acids & Bases",
+      "text": "pH scale range?",
+      "options": [
+        "0-7",
+        "1-10",
+        "0-14",
+        "1-14"
+      ],
+      "correct": 2,
+      "subtopic": "pH Scale"
+    },
+    {
+      "topic": "Acids & Bases",
+      "text": "Acids turn litmus?",
+      "options": [
+        "Blue",
+        "Red",
+        "Green",
+        "Yellow"
+      ],
+      "correct": 1,
+      "subtopic": "Indicators"
+    },
+    {
+      "topic": "Acids & Bases",
+      "text": "Neutralization produces?",
+      "options": [
+        "Acid and base",
+        "Salt and water",
+        "Salt and hydrogen",
+        "Water only"
+      ],
+      "correct": 1,
+      "subtopic": "Neutralization"
+    },
+    {
+      "topic": "Periodic Table",
+      "text": "Elements in same group have same?",
+      "options": [
+        "Atomic mass",
+        "Valence electrons",
+        "Number of shells",
+        "Atomic number"
+      ],
+      "correct": 1,
+      "subtopic": "Groups"
+    },
+    {
+      "topic": "Periodic Table",
+      "text": "Noble gases are?",
+      "options": [
+        "Reactive",
+        "Unreactive",
+        "Radioactive",
+        "Toxic"
+      ],
+      "correct": 1,
+      "subtopic": "Noble Gases"
+    },
+    {
+      "topic": "Periodic Table",
+      "text": "Mendeleev arranged elements by?",
+      "options": [
+        "Atomic number",
+        "Atomic mass",
+        "Density",
+        "Reactivity"
+      ],
+      "correct": 1,
+      "subtopic": "History"
+    },
+    {
+      "topic": "Organic Chemistry",
+      "text": "Simplest organic compound?",
+      "options": [
+        "Methane",
+        "Ethane",
+        "Propane",
+        "Butane"
+      ],
+      "correct": 0,
+      "subtopic": "Hydrocarbons"
+    },
+    {
+      "topic": "Organic Chemistry",
+      "text": "Functional group of alcohols?",
+      "options": [
+        "-OH",
+        "-COOH",
+        "-CHO",
+        "-NH₂"
+      ],
+      "correct": 0,
+      "subtopic": "Functional Groups"
+    },
+    {
+      "topic": "Organic Chemistry",
+      "text": "Cracking produces?",
+      "options": [
+        "Longer hydrocarbons",
+        "Shorter hydrocarbons",
+        "Carbon only",
+        "Hydrogen only"
+      ],
+      "correct": 1,
+      "subtopic": "Cracking"
+    },
+    {
+      "topic": "Organic Chemistry",
+      "text": "Alkanes are?",
+      "options": [
+        "Unsaturated",
+        "Saturated",
+        "Aromatic",
+        "Cyclic"
+      ],
+      "correct": 1,
+      "subtopic": "Alkanes"
+    },
+    {
+      "topic": "Electrochemistry",
+      "text": "Electrolysis uses?",
+      "options": [
+        "Heat",
+        "Electricity",
+        "Light",
+        "Pressure"
+      ],
+      "correct": 1,
+      "subtopic": "Electrolysis"
+    },
+    {
+      "topic": "Electrochemistry",
+      "text": "Cathode is?",
+      "options": [
+        "Positive electrode",
+        "Negative electrode",
+        "Neutral electrode",
+        "Salt bridge"
+      ],
+      "correct": 1,
+      "subtopic": "Electrodes"
+    },
+    {
+      "topic": "Kinetics",
+      "text": "Increasing temperature does what to reaction rate?",
+      "options": [
+        "Decreases",
+        "Increases",
+        "No effect",
+        "Stops reaction"
+      ],
+      "correct": 1,
+      "subtopic": "Rate Factors"
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "name": "Biology",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Cell Biology",
+    "Genetics",
+    "Ecology",
+    "Human Physiology",
+    "Evolution",
+    "Classification",
+    "Plant Biology",
+    "Health & Disease"
+  ],
+  "questions": [
+    {
+      "topic": "Cell Biology",
+      "text": "What is the powerhouse of the cell?",
+      "options": [
+        "Nucleus",
+        "Mitochondrion",
+        "Ribosome",
+        "Golgi"
+      ],
+      "correct": 1,
+      "subtopic": "Organelles"
+    },
+    {
+      "topic": "Cell Biology",
+      "text": "Which structure controls cell activities?",
+      "options": [
+        "Cytoplasm",
+        "Nucleus",
+        "Cell wall",
+        "Ribosome"
+      ],
+      "correct": 1,
+      "subtopic": "Nucleus"
+    },
+    {
+      "topic": "Cell Biology",
+      "text": "Prokaryotic cells lack?",
+      "options": [
+        "DNA",
+        "Nucleus",
+        "Ribosomes",
+        "Cell membrane"
+      ],
+      "correct": 1,
+      "subtopic": "Cell Types"
+    },
+    {
+      "topic": "Cell Biology",
+      "text": "What is the function of ribosomes?",
+      "options": [
+        "Energy production",
+        "Protein synthesis",
+        "Lipid synthesis",
+        "DNA replication"
+      ],
+      "correct": 1,
+      "subtopic": "Organelles"
+    },
+    {
+      "topic": "Cell Biology",
+      "text": "Cell membrane is made of?",
+      "options": [
+        "Protein only",
+        "Phospholipid bilayer",
+        "Cellulose",
+        "Chitin"
+      ],
+      "correct": 1,
+      "subtopic": "Membrane"
+    },
+    {
+      "topic": "Classification",
+      "text": "Which kingdom includes humans?",
+      "options": [
+        "Plantae",
+        "Animalia",
+        "Fungi",
+        "Protista"
+      ],
+      "correct": 1,
+      "subtopic": "Kingdoms"
+    },
+    {
+      "topic": "Classification",
+      "text": "Binomial nomenclature uses?",
+      "options": [
+        "Genus and species",
+        "Family and order",
+        "Class and phylum",
+        "Kingdom and genus"
+      ],
+      "correct": 0,
+      "subtopic": "Naming"
+    },
+    {
+      "topic": "Plant Biology",
+      "text": "What does xylem transport?",
+      "options": [
+        "Sugar",
+        "Water",
+        "Amino acids",
+        "Hormones"
+      ],
+      "correct": 1,
+      "subtopic": "Transport"
+    },
+    {
+      "topic": "Plant Biology",
+      "text": "Photosynthesis occurs in?",
+      "options": [
+        "Mitochondria",
+        "Chloroplasts",
+        "Nucleus",
+        "Vacuole"
+      ],
+      "correct": 1,
+      "subtopic": "Photosynthesis"
+    },
+    {
+      "topic": "Genetics",
+      "text": "DNA stands for?",
+      "options": [
+        "Deoxyribonucleic Acid",
+        "Diribonucleic Acid",
+        "Deoxyribose Acid",
+        "Dynamic Nucleic Acid"
+      ],
+      "correct": 0,
+      "subtopic": "DNA"
+    },
+    {
+      "topic": "Genetics",
+      "text": "How many chromosomes in humans?",
+      "options": [
+        "23",
+        "46",
+        "44",
+        "48"
+      ],
+      "correct": 1,
+      "subtopic": "Chromosomes"
+    },
+    {
+      "topic": "Genetics",
+      "text": "A dominant allele is represented by?",
+      "options": [
+        "Lowercase letter",
+        "Uppercase letter",
+        "Number",
+        "Symbol"
+      ],
+      "correct": 1,
+      "subtopic": "Alleles"
+    },
+    {
+      "topic": "Genetics",
+      "text": "What is a phenotype?",
+      "options": [
+        "Genetic makeup",
+        "Physical appearance",
+        "DNA sequence",
+        "Gene location"
+      ],
+      "correct": 1,
+      "subtopic": "Genetics Basics"
+    },
+    {
+      "topic": "Ecology",
+      "text": "What is the primary producer?",
+      "options": [
+        "Herbivore",
+        "Carnivore",
+        "Plant",
+        "Decomposer"
+      ],
+      "correct": 2,
+      "subtopic": "Food Chains"
+    },
+    {
+      "topic": "Ecology",
+      "text": "Decomposers break down?",
+      "options": [
+        "Living plants",
+        "Dead matter",
+        "Rocks",
+        "Air"
+      ],
+      "correct": 1,
+      "subtopic": "Decomposition"
+    },
+    {
+      "topic": "Ecology",
+      "text": "A habitat is?",
+      "options": [
+        "Where an organism lives",
+        "What an organism eats",
+        "How an organism reproduces",
+        "An organism's role"
+      ],
+      "correct": 0,
+      "subtopic": "Ecology Basics"
+    },
+    {
+      "topic": "Ecology",
+      "text": "Carbon cycle involves?",
+      "options": [
+        "Only respiration",
+        "Photosynthesis and respiration",
+        "Only decomposition",
+        "Only combustion"
+      ],
+      "correct": 1,
+      "subtopic": "Cycles"
+    },
+    {
+      "topic": "Human Physiology",
+      "text": "How many chambers in the heart?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 2,
+      "subtopic": "Circulatory System"
+    },
+    {
+      "topic": "Human Physiology",
+      "text": "What does hemoglobin carry?",
+      "options": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Nutrients",
+        "Waste"
+      ],
+      "correct": 1,
+      "subtopic": "Blood"
+    },
+    {
+      "topic": "Human Physiology",
+      "text": "Enzymes are made of?",
+      "options": [
+        "Carbohydrates",
+        "Proteins",
+        "Lipids",
+        "Nucleic acids"
+      ],
+      "correct": 1,
+      "subtopic": "Enzymes"
+    },
+    {
+      "topic": "Human Physiology",
+      "text": "The lungs are part of which system?",
+      "options": [
+        "Circulatory",
+        "Respiratory",
+        "Digestive",
+        "Nervous"
+      ],
+      "correct": 1,
+      "subtopic": "Respiratory System"
+    },
+    {
+      "topic": "Human Physiology",
+      "text": "Nephrons are in the?",
+      "options": [
+        "Heart",
+        "Liver",
+        "Kidney",
+        "Lungs"
+      ],
+      "correct": 2,
+      "subtopic": "Excretion"
+    },
+    {
+      "topic": "Health & Disease",
+      "text": "Vaccines work by?",
+      "options": [
+        "Killing pathogens",
+        "Stimulating immune response",
+        "Blocking viruses",
+        "Killing bacteria"
+      ],
+      "correct": 1,
+      "subtopic": "Immunity"
+    },
+    {
+      "topic": "Health & Disease",
+      "text": "HIV attacks which cells?",
+      "options": [
+        "Red blood cells",
+        "White blood cells",
+        "Nerve cells",
+        "Muscle cells"
+      ],
+      "correct": 1,
+      "subtopic": "Diseases"
+    },
+    {
+      "topic": "Evolution",
+      "text": "Who proposed natural selection?",
+      "options": [
+        "Lamarck",
+        "Darwin",
+        "Mendel",
+        "Wallace"
+      ],
+      "correct": 1,
+      "subtopic": "Evolution Theory"
+    },
+    {
+      "topic": "Evolution",
+      "text": "Fossils provide evidence for?",
+      "options": [
+        "Climate change",
+        "Evolution",
+        "Plate tectonics",
+        "Weather patterns"
+      ],
+      "correct": 1,
+      "subtopic": "Evidence"
+    }
+  ]
+}

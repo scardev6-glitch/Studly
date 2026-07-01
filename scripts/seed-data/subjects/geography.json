@@ -1,0 +1,198 @@
+{
+  "name": "Geography",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Physical Geography",
+    "Human Geography",
+    "Map Skills",
+    "Climate",
+    "Population",
+    "Settlements",
+    "Natural Resources"
+  ],
+  "questions": [
+    {
+      "topic": "Physical Geography",
+      "text": "Largest ocean?",
+      "options": [
+        "Atlantic",
+        "Indian",
+        "Pacific",
+        "Arctic"
+      ],
+      "correct": 2,
+      "subtopic": "Oceans"
+    },
+    {
+      "topic": "Physical Geography",
+      "text": "Longest river?",
+      "options": [
+        "Amazon",
+        "Nile",
+        "Mississippi",
+        "Yangtze"
+      ],
+      "correct": 1,
+      "subtopic": "Rivers"
+    },
+    {
+      "topic": "Physical Geography",
+      "text": "Tectonic plates cause?",
+      "options": [
+        "Weather",
+        "Earthquakes",
+        "Erosion",
+        "Deposition"
+      ],
+      "correct": 1,
+      "subtopic": "Plate Tectonics"
+    },
+    {
+      "topic": "Physical Geography",
+      "text": "Weathering is?",
+      "options": [
+        "Rocks breaking down",
+        "Rocks moving",
+        "Volcanic eruption",
+        "Earthquake"
+      ],
+      "correct": 0,
+      "subtopic": "Weathering"
+    },
+    {
+      "topic": "Climate",
+      "text": "Greenhouse gas?",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Nitrogen",
+        "Helium"
+      ],
+      "correct": 1,
+      "subtopic": "Climate Change"
+    },
+    {
+      "topic": "Climate",
+      "text": "The equator has?",
+      "options": [
+        "Cold climate",
+        "Hot climate",
+        "Temperate climate",
+        "Arctic climate"
+      ],
+      "correct": 1,
+      "subtopic": "Climate Zones"
+    },
+    {
+      "topic": "Climate",
+      "text": "Rain shadow effect causes?",
+      "options": [
+        "More rain on windward side",
+        "More rain on leeward side",
+        "Equal rain",
+        "No rain"
+      ],
+      "correct": 0,
+      "subtopic": "Rainfall"
+    },
+    {
+      "topic": "Population",
+      "text": "Population density is?",
+      "options": [
+        "Total population",
+        "People per km²",
+        "Birth rate",
+        "Death rate"
+      ],
+      "correct": 1,
+      "subtopic": "Population Basics"
+    },
+    {
+      "topic": "Population",
+      "text": "Push factor for migration?",
+      "options": [
+        "Better jobs",
+        "War",
+        "Education",
+        "Family"
+      ],
+      "correct": 1,
+      "subtopic": "Migration"
+    },
+    {
+      "topic": "Human Geography",
+      "text": "GDP measures?",
+      "options": [
+        "Population",
+        "Economic output",
+        "Education",
+        "Health"
+      ],
+      "correct": 1,
+      "subtopic": "Economic Geography"
+    },
+    {
+      "topic": "Human Geography",
+      "text": "Urbanization is?",
+      "options": [
+        "Rural to urban move",
+        "Urban to rural move",
+        "International move",
+        "Seasonal move"
+      ],
+      "correct": 0,
+      "subtopic": "Urbanization"
+    },
+    {
+      "topic": "Map Skills",
+      "text": "Contour lines show?",
+      "options": [
+        "Population",
+        "Elevation",
+        "Roads",
+        "Rivers"
+      ],
+      "correct": 1,
+      "subtopic": "Topography"
+    },
+    {
+      "topic": "Map Skills",
+      "text": "Scale 1:50000 means?",
+      "options": [
+        "1cm = 500m",
+        "1cm = 500km",
+        "1cm = 50m",
+        "1cm = 5km"
+      ],
+      "correct": 0,
+      "subtopic": "Map Scale"
+    },
+    {
+      "topic": "Settlements",
+      "text": "A nucleated settlement is?",
+      "options": [
+        "Clustered",
+        "Dispersed",
+        "Linear",
+        "Circular"
+      ],
+      "correct": 0,
+      "subtopic": "Settlement Patterns"
+    },
+    {
+      "topic": "Natural Resources",
+      "text": "Renewable resource?",
+      "options": [
+        "Coal",
+        "Solar",
+        "Oil",
+        "Natural gas"
+      ],
+      "correct": 1,
+      "subtopic": "Resources"
+    }
+  ]
+}

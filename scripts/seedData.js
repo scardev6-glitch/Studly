@@ -9,13 +9,7 @@ const Question = require('../src/models/Question');
 const User = require('../src/models/User');
 const UserProgress = require('../src/models/UserProgress');
 const { findVideoForTopic } = require('../src/services/videoMapper');
-
-/**
- * COMPREHENSIVE EGCSE/JC STUDLY SEED DATA
- * 15+ subjects, 80+ topics, 500+ questions, local video files
- */
-
-const SUBJECTS_DATA = [
+const { subjects: SUBJECTS_DATA, explanations } = require('./seed-data');
   {
     name: 'Mathematics',
     levels: ['jc', 'egcse'],

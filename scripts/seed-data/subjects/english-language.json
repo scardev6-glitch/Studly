@@ -1,0 +1,222 @@
+{
+  "name": "English Language",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Grammar",
+    "Reading Comprehension",
+    "Writing",
+    "Vocabulary",
+    "Literature",
+    "Oral Skills",
+    "Comprehension"
+  ],
+  "questions": [
+    {
+      "topic": "Grammar",
+      "text": "Subject of \"The dog ran\"?",
+      "options": [
+        "dog",
+        "ran",
+        "quickly",
+        "The"
+      ],
+      "correct": 0,
+      "subtopic": "Sentence Parts"
+    },
+    {
+      "topic": "Grammar",
+      "text": "Past tense of \"run\"?",
+      "options": [
+        "runned",
+        "ran",
+        "running",
+        "runs"
+      ],
+      "correct": 1,
+      "subtopic": "Tenses"
+    },
+    {
+      "topic": "Grammar",
+      "text": "A conjunction connects?",
+      "options": [
+        "Nouns",
+        "Words/phrases",
+        "Verbs",
+        "Adjectives"
+      ],
+      "correct": 1,
+      "subtopic": "Conjunctions"
+    },
+    {
+      "topic": "Grammar",
+      "text": "An adverb modifies?",
+      "options": [
+        "Noun",
+        "Verb",
+        "Pronoun",
+        "Article"
+      ],
+      "correct": 1,
+      "subtopic": "Adverbs"
+    },
+    {
+      "topic": "Grammar",
+      "text": "\"Quickly\" is an?",
+      "options": [
+        "Adjective",
+        "Adverb",
+        "Verb",
+        "Noun"
+      ],
+      "correct": 1,
+      "subtopic": "Parts of Speech"
+    },
+    {
+      "topic": "Reading Comprehension",
+      "text": "Main idea of a passage is?",
+      "options": [
+        "Details",
+        "Central theme",
+        "Examples",
+        "Opinions"
+      ],
+      "correct": 1,
+      "subtopic": "Main Idea"
+    },
+    {
+      "topic": "Reading Comprehension",
+      "text": "Inference means?",
+      "options": [
+        "Reading quickly",
+        "Reading between lines",
+        "Reading aloud",
+        "Memorizing"
+      ],
+      "correct": 1,
+      "subtopic": "Inference"
+    },
+    {
+      "topic": "Writing",
+      "text": "Essay should have?",
+      "options": [
+        "Only paragraphs",
+        "Intro, body, conclusion",
+        "Just ideas",
+        "No structure"
+      ],
+      "correct": 1,
+      "subtopic": "Structure"
+    },
+    {
+      "topic": "Writing",
+      "text": "A thesis statement goes in?",
+      "options": [
+        "Conclusion",
+        "Introduction",
+        "Body paragraph",
+        "Title"
+      ],
+      "correct": 1,
+      "subtopic": "Essay Writing"
+    },
+    {
+      "topic": "Writing",
+      "text": "Formal letter should include?",
+      "options": [
+        "Address, date, salutation",
+        "Only message",
+        "Pictures",
+        "Slang"
+      ],
+      "correct": 0,
+      "subtopic": "Letter Writing"
+    },
+    {
+      "topic": "Vocabulary",
+      "text": "\"Benevolent\" means?",
+      "options": [
+        "Cruel",
+        "Kind",
+        "Angry",
+        "Confused"
+      ],
+      "correct": 1,
+      "subtopic": "Word Meanings"
+    },
+    {
+      "topic": "Vocabulary",
+      "text": "\"Abundant\" means?",
+      "options": [
+        "Rare",
+        "Plentiful",
+        "Empty",
+        "Small"
+      ],
+      "correct": 1,
+      "subtopic": "Word Meanings"
+    },
+    {
+      "topic": "Vocabulary",
+      "text": "Antonym of \"ancient\"?",
+      "options": [
+        "Old",
+        "Modern",
+        "Historic",
+        "Aged"
+      ],
+      "correct": 1,
+      "subtopic": "Antonyms"
+    },
+    {
+      "topic": "Literature",
+      "text": "Metaphor is?",
+      "options": [
+        "Like comparison",
+        "Direct comparison",
+        "Repeated word",
+        "Question"
+      ],
+      "correct": 1,
+      "subtopic": "Figures of Speech"
+    },
+    {
+      "topic": "Literature",
+      "text": "Alliteration repeats?",
+      "options": [
+        "Vowel sounds",
+        "Consonant sounds",
+        "Words",
+        "Ideas"
+      ],
+      "correct": 1,
+      "subtopic": "Literary Devices"
+    },
+    {
+      "topic": "Literature",
+      "text": "A stanza is?",
+      "options": [
+        "A line",
+        "A paragraph in poetry",
+        "A chapter",
+        "A scene"
+      ],
+      "correct": 1,
+      "subtopic": "Poetry"
+    },
+    {
+      "topic": "Oral Skills",
+      "text": "Eye contact is important in?",
+      "options": [
+        "Writing",
+        "Speaking",
+        "Reading",
+        "Listening"
+      ],
+      "correct": 1,
+      "subtopic": "Communication"
+    }
+  ]
+}

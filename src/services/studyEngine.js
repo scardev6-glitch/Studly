@@ -1,6 +1,7 @@
 const StudySession = require('../models/StudySession');
 const Video = require('../models/Video');
 const Note = require('../models/Note');
+const Topic = require('../models/Topic');
 const { findVideoForTopic, findPdfForTopic } = require('./videoMapper');
 
 const STEP_TYPES = {
@@ -16,7 +17,6 @@ async function startSession(userId, topicId) {
 
   // If no video in DB, try to find a local video by topic name
   if (!video) {
-    const Topic = require('../models/Topic');
     const topic = await Topic.findById(topicId);
     if (topic) {
       const localVideo = findVideoForTopic(topic.name);

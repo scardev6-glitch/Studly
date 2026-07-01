@@ -1,0 +1,173 @@
+{
+  "name": "Business Studies",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Management",
+    "Marketing",
+    "Finance",
+    "Operations",
+    "Entrepreneurship",
+    "Business Environment"
+  ],
+  "questions": [
+    {
+      "topic": "Management",
+      "text": "Business plan is?",
+      "options": [
+        "Schedule",
+        "Strategy document",
+        "Budget",
+        "Timetable"
+      ],
+      "correct": 1,
+      "subtopic": "Planning"
+    },
+    {
+      "topic": "Management",
+      "text": "Span of control refers to?",
+      "options": [
+        "Number of subordinates",
+        "Company size",
+        "Market share",
+        "Profit margin"
+      ],
+      "correct": 0,
+      "subtopic": "Organization"
+    },
+    {
+      "topic": "Management",
+      "text": "Autocratic leader?",
+      "options": [
+        "Consults team",
+        "Makes decisions alone",
+        "Delegates all",
+        "Votes on issues"
+      ],
+      "correct": 1,
+      "subtopic": "Leadership"
+    },
+    {
+      "topic": "Marketing",
+      "text": "4 Ps of marketing?",
+      "options": [
+        "Price, Product, Place, Promotion",
+        "Profit, People, Process, Product",
+        "Price, People, Place, Promotion",
+        "Product, Price, Profit, Promotion"
+      ],
+      "correct": 0,
+      "subtopic": "Marketing Mix"
+    },
+    {
+      "topic": "Marketing",
+      "text": "Market research helps?",
+      "options": [
+        "Set prices",
+        "Understand customers",
+        "Hire staff",
+        "Buy equipment"
+      ],
+      "correct": 1,
+      "subtopic": "Market Research"
+    },
+    {
+      "topic": "Marketing",
+      "text": "Branding creates?",
+      "options": [
+        "Recognition",
+        "Costs",
+        "Tax",
+        "Regulations"
+      ],
+      "correct": 0,
+      "subtopic": "Branding"
+    },
+    {
+      "topic": "Finance",
+      "text": "Revenue - Costs = ?",
+      "options": [
+        "Profit",
+        "Cash",
+        "Assets",
+        "Equity"
+      ],
+      "correct": 0,
+      "subtopic": "Financial Terms"
+    },
+    {
+      "topic": "Finance",
+      "text": "Start-up capital is for?",
+      "options": [
+        "Daily expenses",
+        "Initial setup",
+        "Marketing",
+        "Salaries"
+      ],
+      "correct": 1,
+      "subtopic": "Finance Sources"
+    },
+    {
+      "topic": "Finance",
+      "text": "Break-even point is when?",
+      "options": [
+        "Revenue = Costs",
+        "Profit is maximized",
+        "Sales are highest",
+        "Costs are lowest"
+      ],
+      "correct": 0,
+      "subtopic": "Break-even"
+    },
+    {
+      "topic": "Operations",
+      "text": "Productivity is?",
+      "options": [
+        "Output per worker",
+        "Total output",
+        "Total cost",
+        "Revenue per unit"
+      ],
+      "correct": 0,
+      "subtopic": "Production"
+    },
+    {
+      "topic": "Operations",
+      "text": "Quality control checks?",
+      "options": [
+        "Before production",
+        "During production",
+        "After production",
+        "All stages"
+      ],
+      "correct": 3,
+      "subtopic": "Quality"
+    },
+    {
+      "topic": "Entrepreneurship",
+      "text": "Entrepreneur takes?",
+      "options": [
+        "No risk",
+        "Calculated risks",
+        "Guaranteed profit",
+        "Salary"
+      ],
+      "correct": 1,
+      "subtopic": "Entrepreneurship"
+    },
+    {
+      "topic": "Business Environment",
+      "text": "External factors include?",
+      "options": [
+        "Staff morale",
+        "Government policy",
+        "Management style",
+        "Company culture"
+      ],
+      "correct": 1,
+      "subtopic": "External Environment"
+    }
+  ]
+}

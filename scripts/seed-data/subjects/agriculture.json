@@ -1,0 +1,137 @@
+{
+  "name": "Agriculture",
+  "levels": [
+    "jc",
+    "egcse"
+  ],
+  "topics": [
+    "Crop Production",
+    "Animal Husbandry",
+    "Soil Science",
+    "Farming Systems",
+    "Agribusiness",
+    "Farm Economics"
+  ],
+  "questions": [
+    {
+      "topic": "Crop Production",
+      "text": "Photosynthesis is?",
+      "options": [
+        "Growth process",
+        "Energy from sun conversion",
+        "Water absorption",
+        "Nutrient uptake"
+      ],
+      "correct": 1,
+      "subtopic": "Plant Biology"
+    },
+    {
+      "topic": "Crop Production",
+      "text": "Nitrogen is important for?",
+      "options": [
+        "Root growth",
+        "Leaf growth",
+        "Flower growth",
+        "Fruit growth"
+      ],
+      "correct": 1,
+      "subtopic": "Plant Nutrition"
+    },
+    {
+      "topic": "Crop Production",
+      "text": "Irrigation provides?",
+      "options": [
+        "Fertilizer",
+        "Water",
+        "Sunlight",
+        "Air"
+      ],
+      "correct": 1,
+      "subtopic": "Water Management"
+    },
+    {
+      "topic": "Animal Husbandry",
+      "text": "Ruminants have?",
+      "options": [
+        "One stomach",
+        "Four stomachs",
+        "No stomach",
+        "Two stomachs"
+      ],
+      "correct": 1,
+      "subtopic": "Digestion"
+    },
+    {
+      "topic": "Animal Husbandry",
+      "text": "Vaccination prevents?",
+      "options": [
+        "Injury",
+        "Disease",
+        "Parasites",
+        "Malnutrition"
+      ],
+      "correct": 1,
+      "subtopic": "Animal Health"
+    },
+    {
+      "topic": "Soil Science",
+      "text": "Loam soil is?",
+      "options": [
+        "Sand only",
+        "Clay only",
+        "Balanced mixture",
+        "Silt only"
+      ],
+      "correct": 2,
+      "subtopic": "Soil Types"
+    },
+    {
+      "topic": "Soil Science",
+      "text": "Humus is?",
+      "options": [
+        "Mineral matter",
+        "Organic matter",
+        "Rock particles",
+        "Water"
+      ],
+      "correct": 1,
+      "subtopic": "Soil Composition"
+    },
+    {
+      "topic": "Farming Systems",
+      "text": "Mixed farming combines?",
+      "options": [
+        "Crops and livestock",
+        "Only crops",
+        "Only livestock",
+        "Fish and crops"
+      ],
+      "correct": 0,
+      "subtopic": "Farming Types"
+    },
+    {
+      "topic": "Agribusiness",
+      "text": "Value addition means?",
+      "options": [
+        "Adding value to raw product",
+        "Reducing costs",
+        "Increasing volume",
+        "Improving transport"
+      ],
+      "correct": 0,
+      "subtopic": "Agribusiness"
+    },
+    {
+      "topic": "Farm Economics",
+      "text": "Fixed costs include?",
+      "options": [
+        "Seeds",
+        "Rent",
+        "Fertilizer",
+        "Labor"
+      ],
+      "correct": 1,
+      "subtopic": "Farm Costs"
+    }
+  ]
+}

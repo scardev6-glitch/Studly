@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const plannerEngine = require('../services/plannerEngine');
 const StudyPlan = require('../models/StudyPlan');
 const UserProgress = require('../models/UserProgress');
@@ -339,7 +340,7 @@ async function addGoal(req, res) {
       return res.status(404).json({ message: 'Plan not found' });
     }
 
-    const goalId = new (require('mongoose')).Types.ObjectId();
+    const goalId = new mongoose.Types.ObjectId();
     plan.dailyGoals.push({
       _id: goalId,
       subject,

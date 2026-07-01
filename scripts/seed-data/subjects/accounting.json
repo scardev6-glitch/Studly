@@ -1,0 +1,160 @@
+{
+  "name": "Accounting",
+  "levels": [
+    "egcse"
+  ],
+  "topics": [
+    "Financial Statements",
+    "Bookkeeping",
+    "Ledgers",
+    "Trial Balance",
+    "Cash Flow",
+    "Ratio Analysis"
+  ],
+  "questions": [
+    {
+      "topic": "Financial Statements",
+      "text": "Accounting equation?",
+      "options": [
+        "Assets = Liabilities - Equity",
+        "Assets = Liabilities + Equity",
+        "Revenue = Expenses",
+        "Cash = Inventory"
+      ],
+      "correct": 1,
+      "subtopic": "Basics"
+    },
+    {
+      "topic": "Financial Statements",
+      "text": "Profit = ?",
+      "options": [
+        "Revenue + Expenses",
+        "Revenue - Expenses",
+        "Assets - Liabilities",
+        "Income - Assets"
+      ],
+      "correct": 1,
+      "subtopic": "Profit"
+    },
+    {
+      "topic": "Financial Statements",
+      "text": "Balance sheet shows?",
+      "options": [
+        "Profit over time",
+        "Financial position",
+        "Cash flow",
+        "Expenses"
+      ],
+      "correct": 1,
+      "subtopic": "Balance Sheet"
+    },
+    {
+      "topic": "Bookkeeping",
+      "text": "Debit entries increase?",
+      "options": [
+        "Liabilities",
+        "Assets",
+        "Revenue",
+        "Equity"
+      ],
+      "correct": 1,
+      "subtopic": "Double Entry"
+    },
+    {
+      "topic": "Bookkeeping",
+      "text": "Credit entries increase?",
+      "options": [
+        "Assets",
+        "Expenses",
+        "Liabilities",
+        "Drawings"
+      ],
+      "correct": 2,
+      "subtopic": "Double Entry"
+    },
+    {
+      "topic": "Ledgers",
+      "text": "Purchase ledger contains?",
+      "options": [
+        "Customer accounts",
+        "Supplier accounts",
+        "Asset accounts",
+        "Revenue accounts"
+      ],
+      "correct": 1,
+      "subtopic": "Ledger Types"
+    },
+    {
+      "topic": "Ledgers",
+      "text": "Nominal ledger contains?",
+      "options": [
+        "All accounts",
+        "Only expenses",
+        "Only revenue",
+        "Only assets"
+      ],
+      "correct": 0,
+      "subtopic": "Ledger Types"
+    },
+    {
+      "topic": "Trial Balance",
+      "text": "Trial balance tests?",
+      "options": [
+        "Accuracy",
+        "Equality of debits/credits",
+        "Profit",
+        "Cash position"
+      ],
+      "correct": 1,
+      "subtopic": "TB Purpose"
+    },
+    {
+      "topic": "Trial Balance",
+      "text": "Suspense account is used when?",
+      "options": [
+        "TB balances",
+        "TB doesn't balance",
+        "Making profit",
+        "Closing accounts"
+      ],
+      "correct": 1,
+      "subtopic": "Suspense"
+    },
+    {
+      "topic": "Cash Flow",
+      "text": "Cash flow statement shows?",
+      "options": [
+        "Profit",
+        "Cash movements",
+        "Assets",
+        "Liabilities"
+      ],
+      "correct": 1,
+      "subtopic": "Cash Flow Basics"
+    },
+    {
+      "topic": "Cash Flow",
+      "text": "Operating activities include?",
+      "options": [
+        "Sales receipts",
+        "Purchase of equipment",
+        "Loan received",
+        "Dividends paid"
+      ],
+      "correct": 0,
+      "subtopic": "Cash Flow Categories"
+    },
+    {
+      "topic": "Ratio Analysis",
+      "text": "Current ratio measures?",
+      "options": [
+        "Profitability",
+        "Liquidity",
+        "Efficiency",
+        "Gearing"
+      ],
+      "correct": 1,
+      "subtopic": "Liquidity Ratios"
+    }
+  ]
+}

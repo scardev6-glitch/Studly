@@ -1,0 +1,22 @@
+{
+  "Linear Equations": " To solve for x, isolate it by performing inverse operations on both sides of the equation.",
+  "Polynomials": " Use the FOIL method: First, Outer, Inner, Last when expanding brackets.",
+  "Factoring": " Look for common factors and patterns like difference of squares: a² - b² = (a-b)(a+b).",
+  "Quadratics": " Quadratic equations can be solved by factoring, completing the square, or using the quadratic formula.",
+  "Indices": " Remember that when raising a power to another power, you multiply the exponents.",
+  "Sequences": " Find the common difference in arithmetic sequences: nth term = a + (n-1)d.",
+  "Circles": " Remember π ≈ 3.14 for calculations. Area = πr², Circumference = 2πr.",
+  "Volume": " Volume formulas depend on the shape. For a cylinder: V = πr²h.",
+  "Trig Ratios": " SOH CAH TOA: Sin = Opposite/Hypotenuse, Cos = Adjacent/Hypotenuse, Tan = Opposite/Adjacent.",
+  "Differentiation": " The derivative gives the rate of change. For xⁿ, the derivative is nxⁿ⁻¹.",
+  "Integration": " Integration is the reverse of differentiation. Don't forget the constant of integration +C.",
+  "Organelles": " Each organelle has a specific function. Mitochondria produce energy, ribosomes make proteins.",
+  "DNA": " DNA contains genetic instructions. It has a double helix structure discovered by Watson and Crick.",
+  "Food Chains": " Energy flows from producers to consumers. Only about 10% of energy passes to the next level.",
+  "Subatomic Particles": " Protons are positively charged, neutrons are neutral, and electrons are negatively charged.",
+  "Chemical Bonds": " Ionic bonds transfer electrons, covalent bonds share electrons between atoms.",
+  "Newton's Laws": " Newton's three laws describe motion: inertia, F=ma, and action-reaction.",
+  "Circuits": " Ohm's Law: V = IR. Voltage = Current × Resistance.",
+  "Memory": " RAM is volatile memory that loses data when power is off. ROM is read-only and permanent.",
+  "Protocols": " Protocols are rules for communication between devices on a network."
+}
