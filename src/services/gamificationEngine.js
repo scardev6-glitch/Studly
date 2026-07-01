@@ -1,32 +1,12 @@
 const User = require('../models/User');
 
 /**
- * LEVEL THRESHOLDS
- * Level N requires N * 100 XP accumulated from previous levels.
- * Cumulative XP for level N = sum of (i * 100) for i = 1 to N-1
- * Example: Level 3 requires 100 + 200 = 300 cumulative XP
+ * LEVEL CALCULATION
+ * Simple linear progression: Level = floor(XP / 100) + 1
+ * Level 1: 0-99 XP, Level 2: 100-199 XP, Level 3: 200-299 XP, etc.
  */
 function calcLevel(totalXp) {
-  if (totalXp < 100) return 1;
-  if (totalXp < 300) return 2;
-  if (totalXp < 600) return 3;
-  if (totalXp < 1000) return 4;
-  if (totalXp < 1500) return 5;
-  if (totalXp < 2100) return 6;
-  if (totalXp < 2800) return 7;
-  if (totalXp < 3600) return 8;
-  if (totalXp < 4500) return 9;
-  if (totalXp < 5500) return 10;
-  if (totalXp < 6600) return 11;
-  if (totalXp < 7800) return 12;
-  if (totalXp < 9100) return 13;
-  if (totalXp < 10500) return 14;
-  if (totalXp < 12000) return 15;
-  if (totalXp < 13600) return 16;
-  if (totalXp < 15300) return 17;
-  if (totalXp < 17100) return 18;
-  if (totalXp < 19000) return 19;
-  return Math.floor(totalXp / 1000) + 10;
+  return Math.floor(totalXp / 100) + 1;
 }
 
 /**

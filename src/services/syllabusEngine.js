@@ -1,9 +1,12 @@
 /**
  * SYLLABUS BREAKDOWN AGENT
  * 
- * Maps every EGCSE/JC subject → topics → granular sub-topics
+ * Maps EGCSE subjects → topics → granular sub-topics
  * with learning objectives, difficulty ratings, and exam weight.
  * 
+ * RESTRICTED TO: Mathematics, Additional Mathematics, Biology, Chemistry, Physics, ICT, Siswati
+ * NO LEVELS: All subjects are EGCSE only (no JC/levels distinction)
+ *
  * This is the authoritative source for the syllabus structure.
  * Used by: study planner, quiz engine, focus sessions, progress tracking.
  */
@@ -11,14 +14,13 @@
 const SYLLABUS = {
 
   // ═══════════════════════════════════════════
-  // MATHEMATICS — EGCSE & JC
+  // MATHEMATICS — EGCSE ONLY
   // ═══════════════════════════════════════════
   'Mathematics': {
-    levels: ['jc', 'egcse'],
     topics: {
       'Algebra': {
         description: 'Algebraic expressions, equations, and functions',
-        weight: 25, // percentage of exam
+        weight: 25,
         subTopics: [
           { name: 'Linear Equations', objectives: ['Solve 1-step and 2-step linear equations', 'Solve equations with brackets', 'Solve equations with unknowns on both sides'], difficulty: 1 },
           { name: 'Simultaneous Equations', objectives: ['Solve by elimination method', 'Solve by substitution method', 'Solve word problems using simultaneous eqs'], difficulty: 2 },
@@ -112,10 +114,57 @@ const SYLLABUS = {
   },
 
   // ═══════════════════════════════════════════
-  // BIOLOGY — EGCSE & JC
+  // ADDITIONAL MATHEMATICS — EGCSE ONLY
+  // ═══════════════════════════════════════════
+  'Additional Mathematics': {
+    topics: {
+      'Advanced Algebra': {
+        description: 'Advanced algebraic concepts and techniques',
+        weight: 30,
+        subTopics: [
+          { name: 'Exponential Functions', objectives: ['Graph exponential functions', 'Solve exponential equations', 'Apply exponential growth/decay'], difficulty: 3 },
+          { name: 'Logarithmic Functions', objectives: ['Understand logarithm definition', 'Apply logarithm rules', 'Solve logarithmic equations'], difficulty: 3 },
+          { name: 'Partial Fractions', objectives: ['Decompose rational expressions', 'Apply partial fractions to integration', 'Solve complex fractions'], difficulty: 3 },
+          { name: 'Complex Numbers', objectives: ['Perform operations with complex numbers', 'Represent in Argand diagram', 'Use De Moivre\'s theorem'], difficulty: 4 },
+          { name: 'Binomial Expansion', objectives: ['Apply binomial theorem', 'Find coefficients', 'Use binomial series'], difficulty: 3 },
+        ]
+      },
+      'Trigonometry': {
+        description: 'Advanced trigonometric concepts',
+        weight: 25,
+        subTopics: [
+          { name: 'Trig Identities', objectives: ['Prove advanced identities', 'Use double angle formulas', 'Apply product-to-sum formulas'], difficulty: 3 },
+          { name: 'Inverse Trig Functions', objectives: ['Apply inverse sine, cosine, tangent', 'Find principal values', 'Solve inverse trig equations'], difficulty: 3 },
+          { name: 'Harmonic Form', objectives: ['Express in harmonic form', 'Find maximum and minimum', 'Solve using harmonic form'], difficulty: 4 },
+          { name: 'Trig Equations', objectives: ['Solve higher level trig equations', 'Apply general solutions', 'Interpret graphically'], difficulty: 3 },
+        ]
+      },
+      'Calculus': {
+        description: 'Advanced differentiation and integration',
+        weight: 25,
+        subTopics: [
+          { name: 'Differentiation Rules', objectives: ['Apply chain rule', 'Apply product rule', 'Apply quotient rule', 'Differentiate transcendental functions'], difficulty: 3 },
+          { name: 'Integration Techniques', objectives: ['Integration by parts', 'Integration by substitution', 'Integrate rational functions'], difficulty: 3 },
+          { name: 'Differential Equations', objectives: ['Solve first-order differential equations', 'Apply separable variables', 'Model real-world scenarios'], difficulty: 4 },
+          { name: 'Sequences & Series', objectives: ['Find sums of infinite series', 'Apply convergence tests', 'Use Taylor and Maclaurin series'], difficulty: 4 },
+        ]
+      },
+      'Coordinate Geometry': {
+        description: 'Analytical geometry and curves',
+        weight: 20,
+        subTopics: [
+          { name: 'Conic Sections', objectives: ['Identify parabolas, ellipses, hyperbolas', 'Find equations of conics', 'Interpret eccentricity'], difficulty: 3 },
+          { name: 'Parametric Equations', objectives: ['Convert between parametric and Cartesian', 'Find derivatives parametrically', 'Apply to curves'], difficulty: 3 },
+          { name: 'Polar Coordinates', objectives: ['Convert between polar and Cartesian', 'Plot polar curves', 'Calculate areas in polar form'], difficulty: 4 },
+        ]
+      }
+    }
+  },
+
+  // ═══════════════════════════════════════════
+  // BIOLOGY — EGCSE ONLY
   // ═══════════════════════════════════════════
   'Biology': {
-    levels: ['jc', 'egcse'],
     topics: {
       'Cell Biology': {
         description: 'Cell structure, function, and processes',
@@ -148,51 +197,50 @@ const SYLLABUS = {
           { name: 'Ecosystems', objectives: ['Define ecosystem, habitat, niche', 'Identify biotic and abiotic factors', 'Describe energy flow'], difficulty: 1 },
           { name: 'Food Chains', objectives: ['Construct food chains and webs', 'Identify trophic levels', 'Calculate energy transfer efficiency'], difficulty: 1 },
           { name: 'Nutrient Cycles', objectives: ['Describe carbon cycle', 'Describe nitrogen cycle', 'Explain importance of decomposers'], difficulty: 2 },
-          { name: 'Population Ecology', objectives: ['Describe population growth curves', 'Identify limiting factors', 'Explain carrying capacity'], difficulty: 2 },
-          { name: 'Conservation', objectives: ['Explain conservation importance', 'Describe conservation methods', 'Evaluate conservation vs exploitation'], difficulty: 2 },
-          { name: 'Pollution', objectives: ['Identify types of pollution', 'Describe effects on ecosystems', 'Suggest mitigation strategies'], difficulty: 2 },
+          { name: 'Population Dynamics', objectives: ['Describe population growth', 'Identify limiting factors', 'Apply growth models'], difficulty: 2 },
+          { name: 'Succession', objectives: ['Describe primary succession', 'Describe secondary succession', 'Explain climax communities'], difficulty: 2 },
+          { name: 'Conservation', objectives: ['Describe biodiversity importance', 'Explain conservation methods', 'Evaluate protected areas'], difficulty: 2 },
         ]
       },
-      'Human Physiology': {
-        description: 'Human body systems and functions',
-        weight: 20,
+      'Organism Organisation': {
+        description: 'Plant and animal physiology',
+        weight: 12,
         subTopics: [
-          { name: 'Circulatory System', objectives: ['Describe heart structure and function', 'Identify blood vessels', 'Explain double circulation'], difficulty: 2 },
-          { name: 'Respiratory System', objectives: ['Identify respiratory organs', 'Describe gas exchange', 'Explain breathing mechanism'], difficulty: 2 },
-          { name: 'Digestive System', objectives: ['Identify digestive organs', 'Describe enzyme functions', 'Explain absorption in small intestine'], difficulty: 2 },
-          { name: 'Excretory System', objectives: ['Identify kidney structure', 'Describe urine formation', 'Explain osmoregulation'], difficulty: 3 },
-          { name: 'Nervous System', objectives: ['Describe neuron structure', 'Explain reflex arcs', 'Identify brain regions and functions'], difficulty: 3 },
-          { name: 'Endocrine System', objectives: ['Identify major glands', 'Explain hormone action', 'Describe feedback mechanisms'], difficulty: 3 },
-          { name: 'Immune System', objectives: ['Describe immune response', 'Explain vaccination', 'Distinguish active vs passive immunity'], difficulty: 2 },
-          { name: 'Reproduction', objectives: ['Describe male and female systems', 'Explain menstrual cycle', 'Describe fertilisation and development'], difficulty: 3 },
+          { name: 'Plant Transport', objectives: ['Describe xylem function', 'Describe phloem function', 'Explain transpiration'], difficulty: 2 },
+          { name: 'Animal Transport', objectives: ['Describe blood circulation', 'Identify blood vessels', 'Explain gas exchange'], difficulty: 2 },
+          { name: 'Nervous System', objectives: ['Describe neuron structure', 'Explain synaptic transmission', 'Describe reflex arcs'], difficulty: 2 },
+          { name: 'Hormones', objectives: ['Describe endocrine system', 'Explain hormone action', 'Describe feedback mechanisms'], difficulty: 2 },
+          { name: 'Homeostasis', objectives: ['Explain thermoregulation', 'Describe osmoregulation', 'Explain blood glucose control'], difficulty: 3 },
+          { name: 'Reproduction', objectives: ['Describe human reproduction', 'Explain gametogenesis', 'Describe contraception methods'], difficulty: 2 },
         ]
       },
-      'Evolution': {
-        description: 'Theories of evolution and evidence',
+      'Health and Disease': {
+        description: 'Disease, immunity, and health',
         weight: 8,
         subTopics: [
-          { name: 'Evolution Theory', objectives: ['Explain Darwin\'s theory', 'Describe Wallace\'s contributions', 'Compare Lamarck vs Darwin'], difficulty: 2 },
-          { name: 'Evidence for Evolution', objectives: ['Describe fossil evidence', 'Explain comparative anatomy', 'Describe DNA evidence'], difficulty: 2 },
-          { name: 'Classification', objectives: ['Explain binomial nomenclature', 'Describe five kingdom system', 'Classify organisms using keys'], difficulty: 1 },
+          { name: 'Pathogens', objectives: ['Identify disease-causing organisms', 'Describe transmission routes', 'Explain disease spread'], difficulty: 1 },
+          { name: 'Immune System', objectives: ['Describe innate immunity', 'Describe acquired immunity', 'Explain immune response'], difficulty: 2 },
+          { name: 'Vaccination', objectives: ['Explain vaccination mechanism', 'Describe vaccine types', 'Evaluate vaccine effectiveness'], difficulty: 2 },
+          { name: 'Non-communicable Diseases', objectives: ['Describe cancer biology', 'Explain cardiovascular disease', 'Describe lifestyle factors'], difficulty: 2 },
         ]
       },
-      'Plant Biology': {
-        description: 'Plant structure, transport, and growth',
-        weight: 10,
+      'Photosynthesis & Respiration': {
+        description: 'Detailed biochemical pathways',
+        weight: 8,
         subTopics: [
-          { name: 'Plant Transport', objectives: ['Describe xylem structure and function', 'Describe phloem structure and function', 'Explain transpiration stream'], difficulty: 2 },
-          { name: 'Plant Growth', objectives: ['Describe tropisms', 'Explain role of auxins', 'Describe plant hormones'], difficulty: 2 },
-          { name: 'Reproduction in Plants', objectives: ['Describe flower structure', 'Explain pollination types', 'Describe seed dispersal'], difficulty: 1 },
+          { name: 'Light-dependent Reactions', objectives: ['Describe photosystem II', 'Describe photosystem I', 'Explain electron transport chain'], difficulty: 3 },
+          { name: 'Light-independent Reactions', objectives: ['Describe Calvin cycle', 'Explain carbon fixation', 'Describe regeneration'], difficulty: 3 },
+          { name: 'Aerobic Respiration', objectives: ['Describe glycolysis', 'Describe Krebs cycle', 'Describe electron transport chain', 'Calculate ATP yield'], difficulty: 3 },
+          { name: 'Anaerobic Respiration', objectives: ['Explain fermentation pathways', 'Compare with aerobic respiration', 'Describe lactate accumulation'], difficulty: 2 },
         ]
       }
     }
   },
 
   // ═══════════════════════════════════════════
-  // CHEMISTRY — EGCSE & JC
+  // CHEMISTRY — EGCSE ONLY
   // ═══════════════════════════════════════════
   'Chemistry': {
-    levels: ['jc', 'egcse'],
     topics: {
       'Atomic Structure': {
         description: 'Atoms, elements, and subatomic particles',
@@ -272,10 +320,9 @@ const SYLLABUS = {
   },
 
   // ═══════════════════════════════════════════
-  // PHYSICS — EGCSE & JC
+  // PHYSICS — EGCSE ONLY
   // ═══════════════════════════════════════════
   'Physics': {
-    levels: ['jc', 'egcse'],
     topics: {
       'Mechanics': {
         description: 'Forces, motion, and energy',
@@ -334,70 +381,9 @@ const SYLLABUS = {
   },
 
   // ═══════════════════════════════════════════
-  // ENGLISH LANGUAGE — EGCSE & JC
-  // ═══════════════════════════════════════════
-  'English Language': {
-    levels: ['jc', 'egcse'],
-    topics: {
-      'Grammar': {
-        description: 'Parts of speech, sentence structure, and punctuation',
-        weight: 20,
-        subTopics: [
-          { name: 'Parts of Speech', objectives: ['Identify nouns, verbs, adjectives, adverbs', 'Use prepositions correctly', 'Identify conjunctions and interjections'], difficulty: 1 },
-          { name: 'Tenses', objectives: ['Use past, present, future tenses', 'Use perfect and continuous forms', 'Maintain tense consistency'], difficulty: 2 },
-          { name: 'Sentence Structure', objectives: ['Identify simple, compound, complex sentences', 'Use clauses correctly', 'Avoid sentence fragments'], difficulty: 2 },
-          { name: 'Punctuation', objectives: ['Use full stops, commas, question marks', 'Use apostrophes correctly', 'Use quotation marks'], difficulty: 1 },
-          { name: 'Subject-Verb Agreement', objectives: ['Match subjects with verbs', 'Handle collective nouns', 'Handle indefinite pronouns'], difficulty: 2 },
-        ]
-      },
-      'Reading Comprehension': {
-        description: 'Understanding and analysing texts',
-        weight: 25,
-        subTopics: [
-          { name: 'Literal Understanding', objectives: ['Identify main ideas', 'Recall specific details', 'Follow sequence of events'], difficulty: 1 },
-          { name: 'Inference', objectives: ['Make logical inferences', 'Read between the lines', 'Draw conclusions from evidence'], difficulty: 2 },
-          { name: 'Author\'s Purpose', objectives: ['Identify purpose (inform, persuade, entertain)', 'Analyse tone and mood', 'Evaluate effectiveness'], difficulty: 3 },
-          { name: 'Vocabulary in Context', objectives: ['Use context clues', 'Understand figurative language', 'Interpret unfamiliar words'], difficulty: 2 },
-          { name: 'Text Structure', objectives: ['Identify text types', 'Analyse organisational patterns', 'Compare different texts'], difficulty: 2 },
-        ]
-      },
-      'Writing': {
-        description: 'Composition and creative writing',
-        weight: 25,
-        subTopics: [
-          { name: 'Essay Structure', objectives: ['Write clear introductions', 'Develop body paragraphs', 'Write effective conclusions'], difficulty: 2 },
-          { name: 'Narrative Writing', objectives: ['Develop plot and characters', 'Use descriptive language', 'Maintain narrative voice'], difficulty: 3 },
-          { name: 'Argumentative Writing', objectives: ['Present balanced arguments', 'Use evidence and examples', 'Counter opposing views'], difficulty: 3 },
-          { name: 'Descriptive Writing', objectives: ['Use sensory details', 'Create vivid imagery', 'Organise descriptions logically'], difficulty: 3 },
-          { name: 'Formal Letters', objectives: ['Format letters correctly', 'Use appropriate register', 'Structure formal communication'], difficulty: 2 },
-        ]
-      },
-      'Vocabulary': {
-        description: 'Word knowledge and usage',
-        weight: 15,
-        subTopics: [
-          { name: 'Synonyms & Antonyms', objectives: ['Identify synonyms', 'Identify antonyms', 'Use precise vocabulary'], difficulty: 1 },
-          { name: 'Word Roots', objectives: ['Identify prefixes and suffixes', 'Understand root meanings', 'Build word families'], difficulty: 2 },
-          { name: 'Figurative Language', objectives: ['Identify metaphors and similes', 'Use personification', 'Understand idioms'], difficulty: 2 },
-        ]
-      },
-      'Literature': {
-        description: 'Study of literary texts',
-        weight: 15,
-        subTopics: [
-          { name: 'Poetry', objectives: ['Analyse poetic devices', 'Interpret meaning and theme', 'Compare poems'], difficulty: 3 },
-          { name: 'Prose', objectives: ['Analyse character development', 'Identify themes and motifs', 'Evaluate narrative techniques'], difficulty: 3 },
-          { name: 'Drama', objectives: ['Analyse dialogue and stage directions', 'Identify dramatic devices', 'Interpret character motivation'], difficulty: 3 },
-        ]
-      }
-    }
-  },
-
-  // ═══════════════════════════════════════════
-  // ICT — EGCSE & JC
+  // ICT — EGCSE ONLY
   // ═══════════════════════════════════════════
   'ICT': {
-    levels: ['jc', 'egcse'],
     topics: {
       'Systems': {
         description: 'Computer systems and components',
@@ -460,439 +446,92 @@ const SYLLABUS = {
   },
 
   // ═══════════════════════════════════════════
-  // GEOGRAPHY — EGCSE & JC
+  // SISWATI — EGCSE ONLY
   // ═══════════════════════════════════════════
-  'Geography': {
-    levels: ['jc', 'egcse'],
+  'Siswati': {
     topics: {
-      'Physical Geography': {
-        description: 'Natural processes and landforms',
-        weight: 25,
-        subTopics: [
-          { name: 'Plate Tectonics', objectives: ['Describe plate boundaries', 'Explain earthquake causes', 'Explain volcanic activity'], difficulty: 2 },
-          { name: 'Rivers', objectives: ['Describe river processes (erosion, transport, deposition)', 'Identify river landforms', 'Explain drainage basins'], difficulty: 2 },
-          { name: 'Coasts', objectives: ['Describe coastal erosion processes', 'Identify coastal landforms', 'Explain coastal management'], difficulty: 2 },
-          { name: 'Glaciation', objectives: ['Describe glacial erosion', 'Identify glacial landforms', 'Explain periglacial processes'], difficulty: 3 },
-          { name: 'Weather & Climate', objectives: ['Describe weather elements', 'Explain climate zones', 'Interpret climate graphs'], difficulty: 1 },
-        ]
-      },
-      'Human Geography': {
-        description: 'Human populations and activities',
-        weight: 25,
-        subTopics: [
-          { name: 'Population', objectives: ['Describe population distribution', 'Explain population change', 'Interpret population pyramids'], difficulty: 2 },
-          { name: 'Urbanisation', objectives: ['Describe urbanisation causes', 'Explain urban problems', 'Describe sustainable cities'], difficulty: 2 },
-          { name: 'Economic Activity', objectives: ['Classify economic sectors', 'Describe industrial location factors', 'Explain globalisation'], difficulty: 2 },
-          { name: 'Development', objectives: ['Measure development (HDI, GDP)', 'Explain development inequalities', 'Describe aid and trade'], difficulty: 2 },
-          { name: 'Settlement', objectives: ['Describe settlement hierarchy', 'Explain settlement patterns', 'Describe land use models'], difficulty: 2 },
-        ]
-      },
-      'Map Skills': {
-        description: 'Reading and interpreting maps',
+      'Grammar': {
+        description: 'Siswati grammar and syntax',
         weight: 20,
         subTopics: [
-          { name: 'Grid References', objectives: ['Use 4-figure grid references', 'Use 6-figure grid references', 'Locate features accurately'], difficulty: 1 },
-          { name: 'Contours', objectives: ['Read contour lines', 'Identify relief features', 'Calculate gradients'], difficulty: 2 },
-          { name: 'Compass Directions', objectives: ['Use 8-point compass', 'Measure bearing', 'Describe directions'], difficulty: 1 },
-          { name: 'Map Symbols', objectives: ['Identify OS map symbols', 'Interpret map keys', 'Use scale to measure distance'], difficulty: 1 },
+          { name: 'Parts of Speech', objectives: ['Identify nouns, verbs, adjectives', 'Use pronouns correctly', 'Apply concords'], difficulty: 1 },
+          { name: 'Tenses', objectives: ['Use present, past, future tenses', 'Apply tense markers', 'Form negative constructions'], difficulty: 2 },
+          { name: 'Sentence Structure', objectives: ['Form simple and complex sentences', 'Use relative clauses', 'Apply word order rules'], difficulty: 2 },
         ]
       },
-      'Climate': {
-        description: 'Climate systems and change',
+      'Vocabulary': {
+        description: 'Siswati vocabulary and word formation',
+        weight: 20,
+        subTopics: [
+          { name: 'Word Formation', objectives: ['Identify noun classes', 'Form plurals correctly', 'Derive words using prefixes/suffixes'], difficulty: 2 },
+          { name: 'Synonyms & Antonyms', objectives: ['Identify synonyms in Siswati', 'Identify antonyms', 'Build lexical range'], difficulty: 1 },
+        ]
+      },
+      'Comprehension': {
+        description: 'Reading and understanding Siswati texts',
+        weight: 20,
+        subTopics: [
+          { name: 'Literal Comprehension', objectives: ['Identify main ideas', 'Recall details', 'Follow narrative sequence'], difficulty: 1 },
+          { name: 'Inferential Comprehension', objectives: ['Make inferences', 'Interpret implicit meaning', 'Analyse character motivation'], difficulty: 2 },
+        ]
+      },
+      'Writing': {
+        description: 'Siswati composition and creative writing',
+        weight: 25,
+        subTopics: [
+          { name: 'Essay Writing', objectives: ['Structure essays properly', 'Develop arguments', 'Write conclusions'], difficulty: 2 },
+          { name: 'Letter Writing', objectives: ['Format formal and informal letters', 'Use appropriate register', 'Organise content'], difficulty: 2 },
+          { name: 'Creative Writing', objectives: ['Write narratives', 'Use descriptive language', 'Develop characters and plot'], difficulty: 3 },
+        ]
+      },
+      'Oral Skills': {
+        description: 'Speaking and listening in Siswati',
         weight: 15,
         subTopics: [
-          { name: 'Climate Zones', objectives: ['Describe world climate zones', 'Explain climate controls (latitude, altitude)', 'Interpret climate data'], difficulty: 1 },
-          { name: 'Climate Change', objectives: ['Describe natural vs human causes', 'Explain greenhouse effect', 'Evaluate mitigation strategies'], difficulty: 2 },
-          { name: 'Ecosystems', objectives: ['Describe biome distribution', 'Explain tropical rainforest characteristics', 'Explain desert characteristics'], difficulty: 2 },
-        ]
-      }
-    }
-  },
-
-  // ═══════════════════════════════════════════
-  // HISTORY — EGCSE & JC
-  // ═══════════════════════════════════════════
-  'History': {
-    levels: ['jc', 'egcse'],
-    topics: {
-      'Ancient History': {
-        description: 'Early civilisations and ancient empires',
-        weight: 15,
-        subTopics: [
-          { name: 'Egyptian Civilisation', objectives: ['Describe Egyptian society', 'Explain pyramid building', 'Describe religious beliefs'], difficulty: 1 },
-          { name: 'Greek Civilisation', objectives: ['Describe Athenian democracy', 'Explain Persian Wars', 'Describe Alexander\'s empire'], difficulty: 1 },
-          { name: 'Roman Empire', objectives: ['Describe Roman Republic to Empire', 'Explain Roman military expansion', 'Describe Roman daily life'], difficulty: 1 },
-        ]
-      },
-      'Modern History': {
-        description: '19th and 20th century world history',
-        weight: 25,
-        subTopics: [
-          { name: 'Industrial Revolution', objectives: ['Describe causes of Industrial Revolution', 'Explain social impacts', 'Describe technological innovations'], difficulty: 2 },
-          { name: 'Colonialism', objectives: ['Describe Scramble for Africa', 'Explain colonial administration', 'Evaluate colonial legacy'], difficulty: 2 },
-          { name: 'Independence Movements', objectives: ['Describe African independence', 'Explain nationalist movements', 'Analyse post-colonial challenges'], difficulty: 3 },
-          { name: 'Cold War', objectives: ['Describe origins of Cold War', 'Explain key events (Cuba, Berlin)', 'Analyse end of Cold War'], difficulty: 3 },
-        ]
-      },
-      'World Wars': {
-        description: 'Causes, events, and consequences of world wars',
-        weight: 20,
-        subTopics: [
-          { name: 'World War I', objectives: ['Describe causes (MANIA)', 'Explain trench warfare', 'Describe Treaty of Versailles'], difficulty: 2 },
-          { name: 'Interwar Period', objectives: ['Describe League of Nations', 'Explain rise of fascism', 'Describe Great Depression'], difficulty: 2 },
-          { name: 'World War II', objectives: ['Describe causes and outbreak', 'Explain key battles and events', 'Describe Holocaust'], difficulty: 3 },
-          { name: 'Post-War', objectives: ['Describe UN formation', 'Explain Marshall Plan', 'Describe decolonisation'], difficulty: 2 },
-        ]
-      },
-      'African History': {
-        description: 'African civilisations and history',
-        weight: 20,
-        subTopics: [
-          { name: 'Pre-Colonial Africa', objectives: ['Describe Great Zimbabwe', 'Explain Mali Empire', 'Describe Swazi kingdom origins'], difficulty: 2 },
-          { name: 'Colonial Africa', objectives: ['Describe Berlin Conference', 'Explain colonial policies', 'Describe African resistance'], difficulty: 2 },
-          { name: 'Post-Colonial Africa', objectives: ['Describe independence struggles', 'Explain nation-building challenges', 'Analyse modern Africa'], difficulty: 3 },
-          { name: 'Southern African History', objectives: ['Describe apartheid system', 'Explain liberation movements', 'Describe post-apartheid transition'], difficulty: 3 },
-        ]
-      },
-      'Civil Rights': {
-        description: 'Movements for equality and justice',
-        weight: 10,
-        subTopics: [
-          { name: 'US Civil Rights', objectives: ['Describe segregation', 'Explain key leaders (MLK, Malcolm X)', 'Describe civil rights legislation'], difficulty: 2 },
-          { name: 'Women\'s Suffrage', objectives: ['Describe suffrage movements', 'Explain key figures', 'Evaluate impact'], difficulty: 2 },
-          { name: 'Human Rights', objectives: ['Describe Universal Declaration', 'Explain human rights organisations', 'Evaluate progress'], difficulty: 2 },
+          { name: 'Pronunciation', objectives: ['Pronounce sounds correctly', 'Apply tone rules', 'Speak clearly'], difficulty: 1 },
+          { name: 'Oral Discussion', objectives: ['Participate in discussions', 'Express opinions clearly', 'Listen actively'], difficulty: 2 },
         ]
       }
     }
   }
 };
 
-// ── Add remaining subjects (shorter definitions) ──
-
-// SISWATI
-SYLLABUS['Siswati'] = {
-  levels: ['jc', 'egcse'],
-  topics: {
-    'Grammar': {
-      description: 'Siswati grammar and syntax',
-      weight: 20,
-      subTopics: [
-        { name: 'Parts of Speech', objectives: ['Identify nouns, verbs, adjectives', 'Use pronouns correctly', 'Apply concords'], difficulty: 1 },
-        { name: 'Tenses', objectives: ['Use present, past, future tenses', 'Apply tense markers', 'Form negative constructions'], difficulty: 2 },
-        { name: 'Sentence Structure', objectives: ['Form simple and complex sentences', 'Use relative clauses', 'Apply word order rules'], difficulty: 2 },
-      ]
-    },
-    'Vocabulary': {
-      description: 'Siswati vocabulary and word formation',
-      weight: 20,
-      subTopics: [
-        { name: 'Word Formation', objectives: ['Identify noun classes', 'Form plurals correctly', 'Derive words using prefixes/suffixes'], difficulty: 2 },
-        { name: 'Synonyms & Antonyms', objectives: ['Identify synonyms in Siswati', 'Identify antonyms', 'Build lexical range'], difficulty: 1 },
-      ]
-    },
-    'Comprehension': {
-      description: 'Reading and understanding Siswati texts',
-      weight: 20,
-      subTopics: [
-        { name: 'Literal Comprehension', objectives: ['Identify main ideas', 'Recall details', 'Follow narrative sequence'], difficulty: 1 },
-        { name: 'Inferential Comprehension', objectives: ['Make inferences', 'Interpret implicit meaning', 'Analyse character motivation'], difficulty: 2 },
-      ]
-    },
-    'Writing': {
-      description: 'Siswati composition and creative writing',
-      weight: 25,
-      subTopics: [
-        { name: 'Essay Writing', objectives: ['Structure essays properly', 'Develop arguments', 'Write conclusions'], difficulty: 2 },
-        { name: 'Letter Writing', objectives: ['Format formal and informal letters', 'Use appropriate register', 'Organise content'], difficulty: 2 },
-        { name: 'Creative Writing', objectives: ['Write narratives', 'Use descriptive language', 'Develop characters and plot'], difficulty: 3 },
-      ]
-    },
-    'Oral Skills': {
-      description: 'Speaking and listening in Siswati',
-      weight: 15,
-      subTopics: [
-        { name: 'Pronunciation', objectives: ['Pronounce sounds correctly', 'Apply tone rules', 'Speak clearly'], difficulty: 1 },
-        { name: 'Oral Discussion', objectives: ['Participate in discussions', 'Express opinions clearly', 'Listen actively'], difficulty: 2 },
-      ]
-    }
-  }
-};
-
-// ACCOUNTING
-SYLLABUS['Accounting'] = {
-  levels: ['egcse'],
-  topics: {
-    'Financial Statements': {
-      description: 'Preparation of financial statements',
-      weight: 25,
-      subTopics: [
-        { name: 'Income Statement', objectives: ['Prepare trading account', 'Calculate gross profit', 'Calculate net profit'], difficulty: 2 },
-        { name: 'Balance Sheet', objectives: ['Classify assets and liabilities', 'Prepare balance sheet', 'Calculate working capital'], difficulty: 2 },
-        { name: 'Cash Flow Statement', objectives: ['Identify cash inflows/outflows', 'Prepare cash flow', 'Interpret cash position'], difficulty: 3 },
-      ]
-    },
-    'Bookkeeping': {
-      description: 'Double-entry and accounting records',
-      weight: 20,
-      subTopics: [
-        { name: 'Double Entry', objectives: ['Apply debit and credit rules', 'Record transactions', 'Balance accounts'], difficulty: 1 },
-        { name: 'Ledger Accounts', objectives: ['Post to ledger accounts', 'Prepare trial balance', 'Identify errors'], difficulty: 2 },
-        { name: 'Control Accounts', objectives: ['Prepare sales ledger control', 'Prepare purchases ledger control', 'Reconcile control accounts'], difficulty: 3 },
-      ]
-    },
-    'Ratio Analysis': {
-      description: 'Financial ratios and interpretation',
-      weight: 15,
-      subTopics: [
-        { name: 'Profitability Ratios', objectives: ['Calculate gross profit margin', 'Calculate net profit margin', 'Calculate ROCE'], difficulty: 2 },
-        { name: 'Liquidity Ratios', objectives: ['Calculate current ratio', 'Calculate quick ratio', 'Interpret liquidity position'], difficulty: 2 },
-        { name: 'Efficiency Ratios', objectives: ['Calculate stock turnover', 'Calculate debtor days', 'Calculate creditor days'], difficulty: 3 },
-      ]
-    }
-  }
-};
-
-// BUSINESS STUDIES
-SYLLABUS['Business Studies'] = {
-  levels: ['egcse'],
-  topics: {
-    'Management': {
-      description: 'Business management and leadership',
-      weight: 20,
-      subTopics: [
-        { name: 'Leadership Styles', objectives: ['Describe autocratic, democratic, laissez-faire', 'Evaluate leadership effectiveness', 'Apply to scenarios'], difficulty: 2 },
-        { name: 'Organisational Structure', objectives: ['Describe functional areas', 'Explain chain of command', 'Draw organisation charts'], difficulty: 1 },
-      ]
-    },
-    'Marketing': {
-      description: 'Marketing principles and strategy',
-      weight: 20,
-      subTopics: [
-        { name: 'Marketing Mix (4Ps)', objectives: ['Describe product decisions', 'Explain pricing strategies', 'Describe promotion methods', 'Explain distribution channels'], difficulty: 2 },
-        { name: 'Market Research', objectives: ['Describe primary and secondary research', 'Design questionnaires', 'Analyse research data'], difficulty: 2 },
-      ]
-    },
-    'Finance': {
-      description: 'Business finance and accounting',
-      weight: 20,
-      subTopics: [
-        { name: 'Sources of Finance', objectives: ['Identify internal sources', 'Identify external sources', 'Choose appropriate finance'], difficulty: 1 },
-        { name: 'Break-Even Analysis', objectives: ['Calculate break-even point', 'Draw break-even charts', 'Interpret margin of safety'], difficulty: 2 },
-        { name: 'Profit vs Cash', objectives: ['Distinguish profit and cash', 'Prepare cash flow forecasts', 'Manage working capital'], difficulty: 2 },
-      ]
-    },
-    'Operations': {
-      description: 'Production and operations management',
-      weight: 15,
-      subTopics: [
-        { name: 'Production Methods', objectives: ['Describe job, batch, flow production', 'Evaluate production methods', 'Choose appropriate method'], difficulty: 1 },
-        { name: 'Quality Management', objectives: ['Describe quality control', 'Explain quality assurance', 'Describe TQM'], difficulty: 2 },
-      ]
-    }
-  }
-};
-
-// ECONOMICS
-SYLLABUS['Economics'] = {
-  levels: ['egcse'],
-  topics: {
-    'Microeconomics': {
-      description: 'Individual markets and decision-making',
-      weight: 25,
-      subTopics: [
-        { name: 'Demand & Supply', objectives: ['Draw demand and supply curves', 'Explain market equilibrium', 'Analyse shifts in curves'], difficulty: 2 },
-        { name: 'Elasticity', objectives: ['Calculate price elasticity', 'Interpret elasticity values', 'Apply to business decisions'], difficulty: 2 },
-        { name: 'Market Structures', objectives: ['Describe perfect competition', 'Describe monopoly', 'Compare market structures'], difficulty: 3 },
-      ]
-    },
-    'Macroeconomics': {
-      description: 'National economies and aggregates',
-      weight: 25,
-      subTopics: [
-        { name: 'GDP & Growth', objectives: ['Define GDP', 'Calculate economic growth', 'Interpret GDP data'], difficulty: 2 },
-        { name: 'Inflation', objectives: ['Measure inflation (CPI)', 'Explain causes of inflation', 'Evaluate effects'], difficulty: 2 },
-        { name: 'Unemployment', objectives: ['Measure unemployment', 'Explain types of unemployment', 'Evaluate policies'], difficulty: 2 },
-      ]
-    },
-    'Trade & Development': {
-      description: 'International trade and economic development',
-      weight: 20,
-      subTopics: [
-        { name: 'Globalisation', objectives: ['Describe globalisation causes', 'Evaluate benefits and costs', 'Explain MNCs'], difficulty: 2 },
-        { name: 'Trade Policies', objectives: ['Describe free trade vs protectionism', 'Explain tariffs and quotas', 'Evaluate trade blocs'], difficulty: 2 },
-        { name: 'Exchange Rates', objectives: ['Explain exchange rate determination', 'Calculate currency conversions', 'Evaluate exchange rate changes'], difficulty: 3 },
-      ]
-    }
-  }
-};
-
-// AGRICULTURE
-SYLLABUS['Agriculture'] = {
-  levels: ['jc', 'egcse'],
-  topics: {
-    'Crop Production': {
-      description: 'Cultivation of crops',
-      weight: 22,
-      subTopics: [
-        { name: 'Soil Preparation', objectives: ['Describe ploughing and harrowing', 'Explain soil types', 'Prepare seedbeds'], difficulty: 1 },
-        { name: 'Planting', objectives: ['Select appropriate seeds', 'Apply correct planting methods', 'Calculate seed rates'], difficulty: 1 },
-        { name: 'Crop Management', objectives: ['Apply fertilisers', 'Control weeds', 'Irrigate crops'], difficulty: 2 },
-      ]
-    },
-    'Animal Husbandry': {
-      description: 'Livestock management',
-      weight: 20,
-      subTopics: [
-        { name: 'Animal Nutrition', objectives: ['Identify feed types', 'Formulate rations', 'Describe digestive systems'], difficulty: 2 },
-        { name: 'Animal Health', objectives: ['Identify common diseases', 'Apply vaccination schedules', 'Maintain hygiene'], difficulty: 2 },
-        { name: 'Breeding', objectives: ['Describe breeding methods', 'Select breeding stock', 'Manage reproduction'], difficulty: 2 },
-      ]
-    },
-    'Soil Science': {
-      description: 'Soil properties and management',
-      weight: 18,
-      subTopics: [
-        { name: 'Soil Composition', objectives: ['Identify soil components', 'Test soil texture', 'Measure soil pH'], difficulty: 1 },
-        { name: 'Soil Fertility', objectives: ['Describe nutrient cycles', 'Apply organic and inorganic fertilisers', 'Practice crop rotation'], difficulty: 2 },
-        { name: 'Soil Conservation', objectives: ['Control erosion', 'Practice conservation methods', 'Maintain soil structure'], difficulty: 2 },
-      ]
-    }
-  }
-};
-
-// DEVELOPMENT STUDIES
-SYLLABUS['Development Studies'] = {
-  levels: ['egcse'],
-  topics: {
-    'Poverty': {
-      description: 'Causes, effects, and solutions to poverty',
-      weight: 18,
-      subTopics: [
-        { name: 'Measuring Poverty', objectives: ['Define absolute and relative poverty', 'Use poverty indicators', 'Interpret poverty data'], difficulty: 1 },
-        { name: 'Causes of Poverty', objectives: ['Identify economic causes', 'Identify social causes', 'Identify political causes'], difficulty: 2 },
-        { name: 'Poverty Alleviation', objectives: ['Describe poverty reduction strategies', 'Evaluate aid effectiveness', 'Explain microfinance'], difficulty: 3 },
-      ]
-    },
-    'Health': {
-      description: 'Health issues in developing countries',
-      weight: 18,
-      subTopics: [
-        { name: 'Health Indicators', objectives: ['Measure life expectancy', 'Calculate infant mortality', 'Interpret health data'], difficulty: 1 },
-        { name: 'Disease', objectives: ['Describe communicable diseases', 'Describe non-communicable diseases', 'Explain healthcare systems'], difficulty: 2 },
-        { name: 'Healthcare', objectives: ['Describe primary healthcare', 'Evaluate health programmes', 'Explain health education'], difficulty: 2 },
-      ]
-    },
-    'Education': {
-      description: 'Education and human capital',
-      weight: 16,
-      subTopics: [
-        { name: 'Education Indicators', objectives: ['Measure literacy rates', 'Calculate enrolment ratios', 'Interpret education data'], difficulty: 1 },
-        { name: 'Education Quality', objectives: ['Describe quality factors', 'Evaluate education policies', 'Explain barriers to education'], difficulty: 2 },
-      ]
-    },
-    'Sustainability': {
-      description: 'Sustainable development',
-      weight: 18,
-      subTopics: [
-        { name: 'SDGs', objectives: ['List Sustainable Development Goals', 'Explain each goal', 'Evaluate progress'], difficulty: 2 },
-        { name: 'Environmental Sustainability', objectives: ['Describe resource conservation', 'Explain renewable energy', 'Evaluate environmental policies'], difficulty: 2 },
-      ]
-    }
-  }
-};
-
-// COMBINED SCIENCE
-SYLLABUS['Combined Science'] = {
-  levels: ['jc'],
-  topics: {
-    'Scientific Method': {
-      description: 'Scientific inquiry and experimentation',
-      weight: 10,
-      subTopics: [
-        { name: 'Experimental Design', objectives: ['Identify variables', 'Form hypotheses', 'Design experiments'], difficulty: 1 },
-        { name: 'Data Analysis', objectives: ['Record observations', 'Calculate averages', 'Draw conclusions'], difficulty: 1 },
-        { name: 'Lab Safety', objectives: ['Identify hazards', 'Use equipment safely', 'Follow safety procedures'], difficulty: 1 },
-      ]
-    },
-    'Cells': {
-      description: 'Basic unit of life',
-      weight: 15,
-      subTopics: [
-        { name: 'Cell Structure', objectives: ['Identify cell parts', 'Compare plant and animal cells', 'Describe cell functions'], difficulty: 1 },
-        { name: 'Cell Processes', objectives: ['Describe diffusion', 'Describe osmosis', 'Explain active transport'], difficulty: 2 },
-      ]
-    },
-    'Energy': {
-      description: 'Energy types and transformations',
-      weight: 20,
-      subTopics: [
-        { name: 'Energy Forms', objectives: ['Identify kinetic, potential, thermal energy', 'Describe energy transformations', 'Apply conservation of energy'], difficulty: 1 },
-        { name: 'Energy Resources', objectives: ['Identify renewable resources', 'Identify non-renewable resources', 'Evaluate energy choices'], difficulty: 1 },
-      ]
-    },
-    'Forces': {
-      description: 'Forces and motion',
-      weight: 20,
-      subTopics: [
-        { name: 'Types of Forces', objectives: ['Identify gravitational, friction, magnetic forces', 'Measure force with newton meter', 'Describe effects of forces'], difficulty: 1 },
-        { name: 'Motion', objectives: ['Calculate speed', 'Interpret distance-time graphs', 'Calculate acceleration'], difficulty: 2 },
-      ]
-    },
-    'Materials': {
-      description: 'Properties and uses of materials',
-      weight: 15,
-      subTopics: [
-        { name: 'States of Matter', objectives: ['Describe solid, liquid, gas', 'Explain changes of state', 'Describe particle arrangement'], difficulty: 1 },
-        { name: 'Elements & Compounds', objectives: ['Distinguish elements and compounds', 'Identify chemical symbols', 'Name common compounds'], difficulty: 1 },
-      ]
-    }
-  }
-};
-
 /**
- * Get the full syllabus for a subject.
+ * Get syllabus for a specific subject.
+ * @param {string} subject - Subject name (e.g., 'Mathematics')
+ * @returns {object|null} Subject object with topics and subtopics, or null if not found
  */
-function getSubjectSyllabus(subjectName) {
-  return SYLLABUS[subjectName] || null;
+function getSubjectSyllabus(subject) {
+  return SYLLABUS[subject] || null;
 }
 
 /**
- * Get the breakdown for a specific topic within a subject.
+ * Get detailed breakdown of a specific topic within a subject.
+ * @param {string} subject - Subject name
+ * @param {string} topic - Topic name
+ * @returns {object|null} Topic object with subTopics, or null if not found
  */
-function getTopicBreakdown(subjectName, topicName) {
-  const subject = SYLLABUS[subjectName];
-  if (!subject) return null;
-  const topic = Object.entries(subject.topics).find(([key]) => 
-    key.toLowerCase() === topicName.toLowerCase()
-  );
-  if (!topic) return null;
-  return {
-    subject: subjectName,
-    topicName: topic[0],
-    description: topic[1].description,
-    weight: topic[1].weight,
-    subTopics: topic[1].subTopics.map(st => ({
-      ...st,
-      subject: subjectName,
-      topic: topic[0]
-    })),
-    totalSubTopics: topic[1].subTopics.length
-  };
+function getTopicBreakdown(subject, topic) {
+  const subjectData = SYLLABUS[subject];
+  if (!subjectData) return null;
+  return subjectData.topics[topic] || null;
 }
 
 /**
- * Get all available subjects.
+ * Get all available subjects (EGCSE only, 7 subjects).
+ * @returns {array} Array of subject objects with name and topic count
  */
 function getAvailableSubjects() {
   return Object.keys(SYLLABUS).map(name => ({
     name,
-    levels: SYLLABUS[name].levels,
     topicCount: Object.keys(SYLLABUS[name].topics).length
   }));
 }
 
 /**
  * Search across all subjects and topics.
+ * @param {string} query - Search query string
+ * @returns {array} Array of matching results
  */
 function searchSyllabus(query) {
   const q = query.toLowerCase();
@@ -930,6 +569,8 @@ function searchSyllabus(query) {
 
 /**
  * Get study recommendations based on weak areas.
+ * @param {array} weakSubTopics - Array of weak subtopic names
+ * @returns {array} Array of recommendations
  */
 function getStudyRecommendations(weakSubTopics) {
   const recommendations = [];

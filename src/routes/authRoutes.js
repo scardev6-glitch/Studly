@@ -5,11 +5,14 @@ const { signup, login, getMe, forgotPassword, resetPassword } = require('../cont
 const { protect } = require('../middleware/authMiddleware');
 
 // Validation rules
+const ALLOWED_SUBJECTS = ['Mathematics', 'Additional Mathematics', 'Biology', 'Chemistry', 'Physics', 'ICT', 'Siswati'];
+
 const signupValidation = [
   body('fullname').trim().notEmpty().withMessage('Full name is required'),
   body('email').isEmail().withMessage('Valid email is required').normalizeEmail(),
   body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters'),
-  body('level').isIn(['jc', 'egcse']).withMessage('Level must be jc or egcse'),
+  body('subjects').isArray({ min: 1 }).withMessage('At least one subject is required'),
+  body('subjects.*').isIn(ALLOWED_SUBJECTS).withMessage(`Subjects must be from: ${ALLOWED_SUBJECTS.join(', ')}`),
 ];
 
 const loginValidation = [

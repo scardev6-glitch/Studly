@@ -18,13 +18,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  level: {
-    type: String,
-    enum: ['jc', 'egcse'],
-    required: true
-  },
   subjects: [{
-    type: String
+    type: String,
+    enum: ['Mathematics', 'Additional Mathematics', 'Biology', 'Chemistry', 'Physics', 'ICT', 'Siswati']
   }],
   points: {
     type: Number,

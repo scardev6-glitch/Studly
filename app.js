@@ -20,6 +20,7 @@ const focusRoutes = require('./src/routes/focusRoutes');
 const videoRoutes = require('./src/routes/videoRoutes');
 const leaderboardRoutes = require('./src/routes/leaderboardRoutes');
 const syllabusRoutes = require('./src/routes/syllabusRoutes');
+const uploadRoutes = require('./src/routes/uploadRoutes');
 
 const app = express();
 
@@ -134,6 +135,7 @@ app.use('/api/focus', focusRoutes);
 app.use('/api/videos', videoRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/syllabus', syllabusRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // ════════════════════════════════════════════════════════════════
 // SPA FALLBACK — serve React index.html for all non-API routes

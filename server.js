@@ -6,6 +6,12 @@ const connectDB = require("./config/db");
 
 const PORT = process.env.PORT || 3000;
 
+const fs = require('fs');
+const uploadDir = path.join(__dirname, 'tmp', 'uploads');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
+
 // Validate required env vars (non-blocking)
 if (
   !process.env.JWT_SECRET ||

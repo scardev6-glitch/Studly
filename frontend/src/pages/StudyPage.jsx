@@ -32,195 +32,18 @@ const SUBJECT_COLORS = {
   'Business Studies': '#6366f1', Economics: '#8b5cf6', Agriculture: '#10b981', ICT: '#ec4899',
 };
 
-const MOCK_SUBJECTS = [
-  {
-    _id: 's1', name: 'Mathematics', icon: 'Brain', topics: [
-      { _id: 't1', name: 'Algebra', status: 'done', mastery: 92 },
-      { _id: 't2', name: 'Geometry', status: 'started', mastery: 45 },
-      { _id: 't3', name: 'Calculus', status: 'pending', mastery: 0 },
-      { _id: 't4', name: 'Trigonometry', status: 'locked', mastery: 0 },
-      { _id: 't5', name: 'Statistics', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's2', name: 'English', icon: 'BookText', topics: [
-      { _id: 't6', name: 'Grammar & Syntax', status: 'done', mastery: 88 },
-      { _id: 't7', name: 'Comprehension', status: 'done', mastery: 95 },
-      { _id: 't8', name: 'Essay Writing', status: 'started', mastery: 30 },
-      { _id: 't9', name: 'Literature', status: 'pending', mastery: 0 },
-      { _id: 't10', name: 'Poetry', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's3', name: 'Siswati', icon: 'BookText', topics: [
-      { _id: 't11', name: 'Tinhlamusiso', status: 'done', mastery: 85 },
-      { _id: 't12', name: 'Sichazamagama', status: 'started', mastery: 40 },
-      { _id: 't13', name: 'Tindzaba', status: 'pending', mastery: 0 },
-      { _id: 't14', name: 'Buniyalo', status: 'locked', mastery: 0 },
-      { _id: 't15', name: 'Tincwadzi', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's4', name: 'Biology', icon: 'Target', topics: [
-      { _id: 't16', name: 'Cell Biology', status: 'done', mastery: 90 },
-      { _id: 't17', name: 'Genetics', status: 'started', mastery: 55 },
-      { _id: 't18', name: 'Ecology', status: 'pending', mastery: 0 },
-      { _id: 't19', name: 'Human Physiology', status: 'locked', mastery: 0 },
-      { _id: 't20', name: 'Evolution', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's5', name: 'Chemistry', icon: 'Zap', topics: [
-      { _id: 't21', name: 'Atomic Structure', status: 'done', mastery: 87 },
-      { _id: 't22', name: 'Chemical Bonding', status: 'done', mastery: 78 },
-      { _id: 't23', name: 'Reactions', status: 'started', mastery: 35 },
-      { _id: 't24', name: 'Organic Chemistry', status: 'pending', mastery: 0 },
-      { _id: 't25', name: 'Thermochemistry', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's6', name: 'Physics', icon: 'Scale', topics: [
-      { _id: 't26', name: 'Mechanics', status: 'done', mastery: 82 },
-      { _id: 't27', name: 'Waves & Sound', status: 'started', mastery: 48 },
-      { _id: 't28', name: 'Electricity', status: 'pending', mastery: 0 },
-      { _id: 't29', name: 'Magnetism', status: 'locked', mastery: 0 },
-      { _id: 't30', name: 'Modern Physics', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's7', name: 'Combined Science', icon: 'Layers', topics: [
-      { _id: 't31', name: 'Scientific Inquiry', status: 'done', mastery: 80 },
-      { _id: 't32', name: 'Matter & Materials', status: 'started', mastery: 42 },
-      { _id: 't33', name: 'Energy Systems', status: 'pending', mastery: 0 },
-      { _id: 't34', name: 'Life Processes', status: 'locked', mastery: 0 },
-      { _id: 't35', name: 'Earth & Space', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's8', name: 'Geography', icon: 'LayoutDashboard', topics: [
-      { _id: 't36', name: 'Mapwork', status: 'done', mastery: 75 },
-      { _id: 't37', name: 'Climatology', status: 'started', mastery: 38 },
-      { _id: 't38', name: 'Geomorphology', status: 'pending', mastery: 0 },
-      { _id: 't39', name: 'Population', status: 'locked', mastery: 0 },
-      { _id: 't40', name: 'Settlement', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's9', name: 'History', icon: 'Calendar', topics: [
-      { _id: 't41', name: 'World War I', status: 'done', mastery: 91 },
-      { _id: 't42', name: 'World War II', status: 'started', mastery: 52 },
-      { _id: 't43', name: 'Cold War', status: 'pending', mastery: 0 },
-      { _id: 't44', name: 'African History', status: 'locked', mastery: 0 },
-      { _id: 't45', name: 'Democracy', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's10', name: 'Development Studies', icon: 'ArrowRight', topics: [
-      { _id: 't46', name: 'Development Concepts', status: 'done', mastery: 70 },
-      { _id: 't47', name: 'Economic Development', status: 'started', mastery: 33 },
-      { _id: 't48', name: 'Social Development', status: 'pending', mastery: 0 },
-      { _id: 't49', name: 'Sustainable Development', status: 'locked', mastery: 0 },
-      { _id: 't50', name: 'Globalization', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's11', name: 'Accounting', icon: 'FileTextIcon', topics: [
-      { _id: 't51', name: 'Accounting Equation', status: 'done', mastery: 83 },
-      { _id: 't52', name: 'Journals', status: 'done', mastery: 76 },
-      { _id: 't53', name: 'Ledgers', status: 'started', mastery: 44 },
-      { _id: 't54', name: 'Trial Balance', status: 'pending', mastery: 0 },
-      { _id: 't55', name: 'Financial Statements', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's12', name: 'Business Studies', icon: 'BookOpen', topics: [
-      { _id: 't56', name: 'Business Environment', status: 'done', mastery: 79 },
-      { _id: 't57', name: 'Management', status: 'started', mastery: 41 },
-      { _id: 't58', name: 'Marketing', status: 'pending', mastery: 0 },
-      { _id: 't59', name: 'Finance', status: 'locked', mastery: 0 },
-      { _id: 't60', name: 'Entrepreneurship', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's13', name: 'Economics', icon: 'Scale', topics: [
-      { _id: 't61', name: 'Microeconomics', status: 'done', mastery: 86 },
-      { _id: 't62', name: 'Macroeconomics', status: 'started', mastery: 47 },
-      { _id: 't63', name: 'International Trade', status: 'pending', mastery: 0 },
-      { _id: 't64', name: 'Public Finance', status: 'locked', mastery: 0 },
-      { _id: 't65', name: 'Economic History', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's14', name: 'Agriculture', icon: 'CheckCircle', topics: [
-      { _id: 't66', name: 'Soil Science', status: 'done', mastery: 74 },
-      { _id: 't67', name: 'Crop Production', status: 'started', mastery: 36 },
-      { _id: 't68', name: 'Animal Science', status: 'pending', mastery: 0 },
-      { _id: 't69', name: 'Agricultural Economics', status: 'locked', mastery: 0 },
-      { _id: 't70', name: 'Farm Management', status: 'locked', mastery: 0 },
-    ]
-  },
-  {
-    _id: 's15', name: 'ICT', icon: 'Zap', topics: [
-      { _id: 't71', name: 'Computer Basics', status: 'done', mastery: 96 },
-      { _id: 't72', name: 'Networking', status: 'done', mastery: 81 },
-      { _id: 't73', name: 'Programming', status: 'started', mastery: 53 },
-      { _id: 't74', name: 'Databases', status: 'pending', mastery: 0 },
-      { _id: 't75', name: 'Web Development', status: 'locked', mastery: 0 },
-    ]
-  },
-];
-
-const MOCK_SYLLABUS = {
-  't1': {
-    subject: 'Mathematics', topic: 'Algebra', description: 'Fundamental algebraic concepts including expressions, equations, inequalities, and functions that form the foundation of higher mathematics.',
-    examWeight: '25%', subTopicsCount: 6, objectivesCount: 18,
-    subTopics: [
-      { name: 'Algebraic Expressions', difficulty: 'Beginner', objectives: ['Simplify algebraic expressions', 'Identify like terms', 'Apply distributive property'] },
-      { name: 'Linear Equations', difficulty: 'Beginner', objectives: ['Solve linear equations', 'Graph linear functions', 'Interpret slope and intercept'] },
-      { name: 'Inequalities', difficulty: 'Intermediate', objectives: ['Solve linear inequalities', 'Graph solution sets', 'Compound inequalities'] },
-      { name: 'Quadratic Equations', difficulty: 'Advanced', objectives: ['Factor quadratic expressions', 'Apply quadratic formula', 'Complete the square'] },
-      { name: 'Functions', difficulty: 'Advanced', objectives: ['Define function notation', 'Domain and range', 'Composite functions'] },
-      { name: 'Systems of Equations', difficulty: 'Expert', objectives: ['Solve by substitution', 'Solve by elimination', 'Matrix methods'] },
-    ]
-  },
-  't16': {
-    subject: 'Biology', topic: 'Cell Biology', description: 'Study of cell structure, function, and processes including cell division, transport mechanisms, and cellular respiration.',
-    examWeight: '20%', subTopicsCount: 5, objectivesCount: 15,
-    subTopics: [
-      { name: 'Cell Structure', difficulty: 'Beginner', objectives: ['Identify organelles', 'Compare plant vs animal cells', 'Describe cell membrane structure'] },
-      { name: 'Cell Transport', difficulty: 'Intermediate', objectives: ['Explain diffusion and osmosis', 'Describe active transport', 'Understand endocytosis'] },
-      { name: 'Cell Division', difficulty: 'Advanced', objectives: ['Phases of mitosis', 'Meiosis stages', 'Compare mitosis and meiosis'] },
-      { name: 'Cellular Respiration', difficulty: 'Advanced', objectives: ['Glycolysis steps', 'Krebs cycle', 'Electron transport chain'] },
-      { name: 'Photosynthesis', difficulty: 'Expert', objectives: ['Light-dependent reactions', 'Calvin cycle', 'Factors affecting rate'] },
-    ]
-  },
-  't21': {
-    subject: 'Chemistry', topic: 'Atomic Structure', description: 'Understanding the atom, subatomic particles, electron configurations, and the periodic table organization.',
-    examWeight: '15%', subTopicsCount: 4, objectivesCount: 12,
-    subTopics: [
-      { name: 'Subatomic Particles', difficulty: 'Beginner', objectives: ['Identify protons, neutrons, electrons', 'Calculate atomic number and mass', 'Isotope notation'] },
-      { name: 'Electron Configuration', difficulty: 'Intermediate', objectives: ['Aufbau principle', 'Hund\'s rule', 'Orbital diagrams'] },
-      { name: 'Periodic Trends', difficulty: 'Advanced', objectives: ['Electronegativity trends', 'Ionization energy', 'Atomic radius patterns'] },
-      { name: 'Quantum Numbers', difficulty: 'Expert', objectives: ['Principal quantum number', 'Angular momentum', 'Magnetic and spin numbers'] },
-    ]
-  },
+const EMPTY_SYLLABUS = {
+  subject: 'General',
+  topic: 'Your selected topic',
+  description: 'Syllabus details will appear here once the backend provides them.',
+  examWeight: '—',
+  subTopicsCount: 0,
+  objectivesCount: 0,
+  subTopics: [],
 };
 
-function generateMockData(subjects) {
-  return subjects.map(sub => ({
-    ...sub,
-    progress: Math.floor(Math.random() * 60 + 20),
-    completion: sub.topics.filter(t => t.status === 'done').length / sub.topics.length * 100,
-  }));
-}
-
 function getTopicName(topicId) {
-  for (const sub of MOCK_SUBJECTS) {
-    for (const topic of sub.topics) {
-      if (topic._id === topicId) return topic.name;
-    }
-  }
-  return 'Unknown Topic';
+  return topicId || 'Unknown Topic';
 }
 
 function getLevelTitle(level) {
@@ -344,13 +167,9 @@ function getQuestionsForTopic(topicId) {
   return { questions: all };
 }
 
-const MOCK_REVIEW = {
-  content: [
-    { heading: 'Key Concepts', items: ['Understanding the fundamental principles', 'Application of core formulas', 'Problem-solving strategies'] },
-    { heading: 'Common Mistakes', items: ['Forgetting to distribute negative signs', 'Misidentifying the correct formula', 'Unit conversion errors'] },
-    { heading: 'Memory Aids', items: ['Use acronyms to remember sequences', 'Create visual diagrams for complex processes', 'Practice active recall'] },
-  ],
-  summary: 'Focus on mastering the core concepts before moving to advanced topics. Regular practice with past papers will reinforce your understanding and improve exam performance. Aim to complete at least 10 practice problems per day.',
+const EMPTY_REVIEW = {
+  content: [],
+  summary: 'Review guidance will appear here once your learning data is available.',
 };
 
 export default function StudyPage() {
@@ -406,23 +225,16 @@ export default function StudyPage() {
       setLoading(true);
       try {
         const data = await progressApi.subjects(localStorage.getItem('token'));
-        setSubjects(data.subjects || generateMockData(MOCK_SUBJECTS));
+        setSubjects(data.subjects || []);
       } catch {
-        setSubjects(generateMockData(MOCK_SUBJECTS));
+        setSubjects([]);
       }
       setLoading(false);
     };
     loadSubjects();
   }, []);
 
-  const findTopic = useCallback((topicId) => {
-    for (const sub of MOCK_SUBJECTS) {
-      for (const topic of sub.topics) {
-        if (topic._id === topicId) return topic;
-      }
-    }
-    return null;
-  }, []);
+  const findTopic = useCallback(() => null, []);
 
   const handleTopicClick = (subject, topic) => {
     if (topic.status === 'locked') return;
@@ -451,7 +263,7 @@ export default function StudyPage() {
         aiSummary: 'This topic covers core concepts essential for building a strong foundation. Focus on understanding the relationships between different ideas before memorizing formulas.',
         pdfResource: null,
       },
-      review: MOCK_REVIEW,
+      review: EMPTY_REVIEW,
     });
     if (focusEnabled) {
       startFocusMode();
@@ -593,9 +405,9 @@ export default function StudyPage() {
     setLoading(true);
     try {
       const data = await syllabusApi.get(subject.name, topic.name, localStorage.getItem('token'));
-      setSyllabusData(data.syllabus || MOCK_SYLLABUS[topic._id] || null);
+      setSyllabusData(data.syllabus || EMPTY_SYLLABUS);
     } catch {
-      setSyllabusData(MOCK_SYLLABUS[topic._id] || null);
+      setSyllabusData(EMPTY_SYLLABUS);
     }
     setShowSyllabus(true);
     setLoading(false);

@@ -18,12 +18,8 @@ async function createPlan(req, res) {
       return res.status(400).json({ message: 'Available time cannot exceed 8 hours' });
     }
 
-    try {
-      const plan = await plannerEngine.generateDailyPlan(userId, availableTime);
-      return res.status(201).json(plan);
-    } catch (engineError) {
-      throw engineError;
-    }
+    const plan = await plannerEngine.generateDailyPlan(userId, availableTime);
+    return res.status(201).json(plan);
   } catch (error) {
     res.status(500).json({ message: 'Internal server error' });
   }
@@ -38,17 +34,13 @@ async function getTodayPlan(req, res) {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    try {
-      const plan = await StudyPlan.findOne({ userId, date: today })
-        .populate('dailyGoals.topicId');
-      
-      if (!plan) {
-        return res.status(404).json({ message: 'No plan found for today' });
-      }
-      return res.json(plan);
-    } catch (dbError) {
-      throw dbError;
+    const plan = await StudyPlan.findOne({ userId, date: today })
+      .populate('dailyGoals.topicId');
+    
+    if (!plan) {
+      return res.status(404).json({ message: 'No plan found for today' });
     }
+    return res.json(plan);
   } catch (error) {
     res.status(500).json({ message: 'Internal server error' });
   }

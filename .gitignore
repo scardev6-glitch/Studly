@@ -3,6 +3,11 @@
 .env.local
 .env.production
 
+# ─── Credentials & Service Accounts ───
+studly-drive.json
+*.key
+*.pem
+
 # ─── Dependencies ───
 node_modules/
 

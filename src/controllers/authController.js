@@ -19,7 +19,7 @@ const signup = async (req, res) => {
       return res.status(400).json({ message: errors.array()[0].msg });
     }
 
-    const { fullname, email, password, level, subjects } = req.body;
+    const { fullname, email, password, subjects } = req.body;
 
     let user;
     try {
@@ -30,7 +30,7 @@ const signup = async (req, res) => {
           .json({ message: "An account with this email already exists" });
       }
 
-      user = new User({ fullname, email, password, level, subjects });
+      user = new User({ fullname, email, password, subjects });
       await user.save();
     } catch (dbError) {
       throw dbError;
@@ -47,7 +47,6 @@ const signup = async (req, res) => {
         id: user._id,
         fullname,
         email,
-        level,
         subjects,
       },
     });
@@ -98,7 +97,6 @@ const login = async (req, res) => {
         id: user._id,
         fullname: user.fullname,
         email: user.email,
-        level: user.level,
         subjects: user.subjects,
       },
     });
