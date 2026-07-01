@@ -216,8 +216,8 @@ npm run test:ui
 # 1. Install dependencies
 npm install
 
-# 2. Create .env.test file
-cp .env .env.test
+# 2. Create .env file at project root
+# Tests use the root .env file directly
 
 # 3. Ensure MongoDB is available (tests use in-memory)
 # No special setup needed - uses mongodb-memory-server-core
