@@ -1,6 +1,6 @@
 /**
  * Studly API Service
- * All API calls go through here. Falls back to mock data when backend is offline.
+ * All API calls go through here.
  */
 
 const API_BASE = '/api';

@@ -25,25 +25,6 @@ const LEVEL_TITLES = {
 
 const getXpForLevel = (lvl) => lvl * 100;
 
-const STATS_MOCK = {
-  points: 1250, currentStreak: 7, longestStreak: 14,
-  averageMastery: 68, totalTopics: 12, totalQuizzes: 48,
-  totalXp: 4200, gamificationLevel: 5, aiCredits: 12,
-};
-
-const GAME_MOCK = {
-  level: 5, totalXp: 4200, aiCredits: 12, points: 1250,
-  nextLevelXp: 500, currentLevelXp: 200, xpProgress: 40,
-};
-
-const TOPICS_MOCK = [
-  { _id: 't1', topicId: { _id: 'tt1', name: 'Algebra Fundamentals', subject: 'Mathematics' }, masteryLevel: 85, weakSubtopics: ['Quadratic Equations', 'Polynomial Division'], totalAttempts: 14, nextReviewDate: new Date(Date.now() + 86400000).toISOString() },
-  { _id: 't2', topicId: { _id: 'tt2', name: 'Cell Structure', subject: 'Biology' }, masteryLevel: 45, weakSubtopics: ['Mitochondria Function', 'Protein Synthesis'], totalAttempts: 8, nextReviewDate: new Date(Date.now() + 172800000).toISOString() },
-  { _id: 't3', topicId: { _id: 'tt3', name: 'Chemical Bonding', subject: 'Chemistry' }, masteryLevel: 72, weakSubtopics: ['Covalent Bonds'], totalAttempts: 11, nextReviewDate: new Date(Date.now() + 259200000).toISOString() },
-  { _id: 't4', topicId: { _id: 'tt4', name: 'Newton\'s Laws', subject: 'Physics' }, masteryLevel: 91, weakSubtopics: [], totalAttempts: 20, nextReviewDate: new Date(Date.now() - 86400000).toISOString() },
-  { _id: 't5', topicId: { _id: 'tt5', name: 'World War II', subject: 'History' }, masteryLevel: 38, weakSubtopics: ['Causes of War', 'Post-War Reconstruction', 'The Holocaust'], totalAttempts: 5, nextReviewDate: new Date(Date.now() + 432000000).toISOString() },
-];
-
 export default function DashboardPage() {
   const { user, theme, toggleTheme, unreadCount, logout } = useApp();
   const navigate = useNavigate();
@@ -67,12 +48,7 @@ export default function DashboardPage() {
       const statsData = await progressApi.stats(token);
       setStats(statsData);
     } catch {
-      const saved = localStorage.getItem('gamificationState');
-      if (saved) {
-        try { setStats(JSON.parse(saved)); } catch { setStats(STATS_MOCK); }
-      } else {
-        setStats(STATS_MOCK);
-      }
+      setStats(null);
     }
 
     try {
@@ -88,29 +64,15 @@ export default function DashboardPage() {
       setXpProgress(gameData.xpProgress || 0);
       localStorage.setItem('gamificationState', JSON.stringify(gameData));
     } catch {
-      const saved = localStorage.getItem('gamificationState');
-      let gameData;
-      if (saved) {
-        try { gameData = JSON.parse(saved); } catch { gameData = GAME_MOCK; }
-      } else {
-        gameData = GAME_MOCK;
-      }
-      const savedLevel = localStorage.getItem('lastLevel');
-      const prevLevel = savedLevel ? parseInt(savedLevel, 10) : null;
-      if (prevLevel && gameData.level > prevLevel) {
-        setLevelUpInfo({ prevLevel, newLevel: gameData.level });
-        setShowLevelUp(true);
-      }
-      localStorage.setItem('lastLevel', String(gameData.level));
-      setGameState(gameData);
-      setXpProgress(gameData.xpProgress || 0);
+      setGameState(null);
+      setXpProgress(0);
     }
 
     try {
       const topicsData = await progressApi.topics(token);
       setTopics(topicsData);
     } catch {
-      setTopics(TOPICS_MOCK);
+      setTopics([]);
     }
 
     setLoading(false);

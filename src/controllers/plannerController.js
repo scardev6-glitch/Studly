@@ -22,39 +22,6 @@ async function createPlan(req, res) {
       const plan = await plannerEngine.generateDailyPlan(userId, availableTime);
       return res.status(201).json(plan);
     } catch (engineError) {
-      // Fallback: generate a mock plan when MongoDB is offline
-      if (process.env.AUTH_DISABLED === 'true') {
-        const mockTopics = [
-          { name: 'Algebra', subject: 'Mathematics' },
-          { name: 'Cell Biology', subject: 'Biology' },
-          { name: 'Atomic Structure', subject: 'Chemistry' },
-          { name: 'Grammar', subject: 'English Language' },
-          { name: 'Networks', subject: 'ICT' }
-        ];
-        const sessionDuration = 25;
-        const maxSessions = Math.floor(availableTime / (sessionDuration + 5));
-        const goals = mockTopics.slice(0, Math.min(maxSessions, 4)).map((t, i) => ({
-          _id: 'mock-goal-' + i,
-          subject: t.subject,
-          topicId: { name: t.name },
-          duration: sessionDuration,
-          actualDuration: 0,
-          priority: 'medium',
-          status: 'pending'
-        }));
-        const plan = {
-          _id: 'mock-plan-' + Date.now(),
-          userId,
-          date: new Date(),
-          availableTime,
-          dailyGoals: goals,
-          reminders: [{ time: '09:00', enabled: true, type: 'session-start' }],
-          title: 'Daily Study Plan',
-          priority: 'medium',
-          stats: { startTime: new Date() }
-        };
-        return res.status(201).json(plan);
-      }
       throw engineError;
     }
   } catch (error) {
@@ -80,9 +47,6 @@ async function getTodayPlan(req, res) {
       }
       return res.json(plan);
     } catch (dbError) {
-      if (process.env.AUTH_DISABLED === 'true') {
-        return res.status(404).json({ message: 'No plan found for today' });
-      }
       throw dbError;
     }
   } catch (error) {

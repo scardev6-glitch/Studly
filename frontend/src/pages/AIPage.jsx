@@ -64,7 +64,7 @@ export default function AIPage() {
       setMessages(final);
       saveMessages(final);
     } catch {
-      const fallback = { _id: (Date.now() + 1).toString(), role: 'assistant', content: 'I am here to help! Feel free to ask me any questions about your studies.', timestamp: new Date().toISOString() };
+      const fallback = { _id: (Date.now() + 1).toString(), role: 'assistant', content: 'I could not reach the AI service right now. Please try again shortly.', timestamp: new Date().toISOString() };
       const final = [...updated, fallback];
       setMessages(final);
       saveMessages(final);

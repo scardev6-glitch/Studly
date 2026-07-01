@@ -4,35 +4,11 @@ const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 const { sendPasswordResetEmail } = require("../services/emailService");
 
-// Dev mode mock user for when MongoDB is offline + AUTH_DISABLED=true
-const DEV_USER = {
-  id: "dev-user-id",
-  fullname: "Demo Student",
-  email: "demo@studly.com",
-  level: "jc",
-  subjects: ["Mathematics", "Biology"],
-  points: 1250,
-  currentStreak: 7,
-  longestStreak: 21,
-  totalXp: 1250,
-  gamificationLevel: 3,
-  aiCredits: 10,
-};
-
 /**
  * Check if MongoDB is actually connected.
  */
 function isMongoConnected() {
   return mongoose.connection.readyState === 1;
-}
-
-/**
- * Check if we should fall back to dev/mock mode.
- * Only used when MongoDB is offline AND AUTH_DISABLED=true.
- * When MongoDB is connected, real auth is always used regardless of AUTH_DISABLED.
- */
-function isDevMode() {
-  return process.env.AUTH_DISABLED === "true" && !isMongoConnected();
 }
 
 const signup = async (req, res) => {
@@ -57,25 +33,6 @@ const signup = async (req, res) => {
       user = new User({ fullname, email, password, level, subjects });
       await user.save();
     } catch (dbError) {
-      // Offline dev fallback — ONLY when AUTH_DISABLED=true
-      if (isDevMode()) {
-        console.log("[Dev] MongoDB offline, mock signup");
-        const token = jwt.sign(
-          { id: "dev-user-" + email, fullname },
-          process.env.JWT_SECRET,
-          { expiresIn: "24h" },
-        );
-        return res.status(201).json({
-          token,
-          user: {
-            id: "dev-user-" + email,
-            fullname,
-            email,
-            level,
-            subjects: subjects || [],
-          },
-        });
-      }
       throw dbError;
     }
 
@@ -110,21 +67,6 @@ const login = async (req, res) => {
     }
 
     const { email, password } = req.body;
-
-    // Dev mode: accept ONLY the known demo credentials when DB is offline
-    if (isDevMode()) {
-      if (email === "demo@studly.com" && password === "password123") {
-        console.log("[Dev] Demo login");
-        const token = jwt.sign(
-          { id: DEV_USER.id, fullname: DEV_USER.fullname },
-          process.env.JWT_SECRET,
-          { expiresIn: "24h" },
-        );
-        return res.json({ token, user: DEV_USER });
-      }
-      // Do NOT accept arbitrary credentials in any mode
-      return res.status(401).json({ message: "Invalid credentials" });
-    }
 
     // Production: MongoDB-backed authentication
     let user;
@@ -172,22 +114,13 @@ const getMe = async (req, res) => {
     try {
       user = await User.findById(req.user.id).select("-password");
     } catch (dbError) {
-      if (isDevMode()) {
-        return res.json(DEV_USER);
-      }
       throw dbError;
     }
     if (!user) {
-      if (isDevMode()) {
-        return res.json(DEV_USER);
-      }
       return res.status(404).json({ message: "User not found" });
     }
     res.json(user);
   } catch (error) {
-    if (isDevMode()) {
-      return res.json(DEV_USER);
-    }
     console.error("getMe Error:", error);
     res.status(500).json({ message: "Error fetching profile" });
   }

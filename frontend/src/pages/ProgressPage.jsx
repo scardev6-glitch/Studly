@@ -18,39 +18,20 @@ export default function ProgressPage() {
   const [topics, setTopics] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const STATS_MOCK = {
-    points: 1250, currentStreak: 7, longestStreak: 14,
-    averageMastery: 68, totalTopics: 12, totalQuizzes: 48,
-    totalXp: 4200, gamificationLevel: 5, aiCredits: 12,
-  };
-
-  const TOPICS_MOCK = [
-    { _id: 't1', topicId: { _id: 'tt1', name: 'Algebra Fundamentals', subject: 'Mathematics' }, masteryLevel: 85, weakSubtopics: ['Quadratic Equations', 'Polynomial Division'], totalAttempts: 14, nextReviewDate: new Date(Date.now() + 86400000).toISOString() },
-    { _id: 't2', topicId: { _id: 'tt2', name: 'Cell Structure', subject: 'Biology' }, masteryLevel: 45, weakSubtopics: ['Mitochondria Function', 'Protein Synthesis'], totalAttempts: 8, nextReviewDate: new Date(Date.now() + 172800000).toISOString() },
-    { _id: 't3', topicId: { _id: 'tt3', name: 'Chemical Bonding', subject: 'Chemistry' }, masteryLevel: 72, weakSubtopics: ['Covalent Bonds'], totalAttempts: 11, nextReviewDate: new Date(Date.now() + 259200000).toISOString() },
-    { _id: 't4', topicId: { _id: 'tt4', name: 'Newton\'s Laws', subject: 'Physics' }, masteryLevel: 91, weakSubtopics: [], totalAttempts: 20, nextReviewDate: new Date(Date.now() - 86400000).toISOString() },
-    { _id: 't5', topicId: { _id: 'tt5', name: 'World War II', subject: 'History' }, masteryLevel: 38, weakSubtopics: ['Causes of War', 'Post-War Reconstruction', 'The Holocaust'], totalAttempts: 5, nextReviewDate: new Date(Date.now() + 432000000).toISOString() },
-  ];
-
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
       const statsData = await progressApi.stats(token);
       setStats(statsData);
     } catch {
-      const saved = localStorage.getItem('gamificationState');
-      if (saved) {
-        try { setStats(JSON.parse(saved)); } catch { setStats(STATS_MOCK); }
-      } else {
-        setStats(STATS_MOCK);
-      }
+      setStats(null);
     }
 
     try {
       const topicsData = await progressApi.topics(token);
       setTopics(topicsData);
     } catch {
-      setTopics(TOPICS_MOCK);
+      setTopics([]);
     }
 
     setLoading(false);
@@ -172,7 +153,7 @@ export default function ProgressPage() {
                   const date = new Date();
                   date.setDate(date.getDate() - dayOffset);
                   const isToday = dayOffset === 0;
-                  const isActive = Math.random() > 0.3; // Mock: 70% chance active
+                  const isActive = false;
                   return (
                     <div key={day} style={{ textAlign: 'center', flex: 1 }}>
                       <div style={{
@@ -411,7 +392,7 @@ export default function ProgressPage() {
               </div>
             </div>
 
-            {/* Mock Activity Timeline */}
+            {/* Activity Timeline */}
             <div style={{ fontSize: '14px', fontWeight: 700, marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
               <Clock size={16} />
               Recent Activity

@@ -9,10 +9,8 @@ function isMongoConnected() {
 }
 
 const protect = (req, res, next) => {
-  // Dev bypass — only when MongoDB is offline AND AUTH_DISABLED=true
-  if (process.env.AUTH_DISABLED === 'true' && !isMongoConnected()) {
-    req.user = { id: 'dev-user-id', fullname: 'Dev User' };
-    return next();
+  if (!isMongoConnected()) {
+    return res.status(503).json({ message: 'Authentication service unavailable' });
   }
 
   // Extract Bearer token

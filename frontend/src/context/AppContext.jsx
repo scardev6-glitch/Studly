@@ -2,14 +2,6 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
 
 const AppContext = createContext(null);
 
-const MOCK_NOTIFICATIONS = [
-  { _id: 'n1', type: 'review_reminder', title: 'Time to Review!', message: 'Algebra is due for review. A quick 5-minute session will lock it in.', link: '/study', isRead: false, createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString() },
-  { _id: 'n2', type: 'streak', title: 'Streak Saver', message: 'Your 7-day streak is on the line! One study session today keeps it alive.', link: '/study', isRead: false, createdAt: new Date(Date.now() - 1000 * 60 * 120).toISOString() },
-  { _id: 'n3', type: 'achievement', title: 'Milestone Unlocked!', message: 'You\'ve completed 5 topics this week. Keep the momentum!', link: '', isRead: true, createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString() },
-  { _id: 'n4', type: 'session_reminder', title: 'Study Session Ready', message: 'Your study session on Cell Biology is ready. Pick up where you left off.', link: '/study', isRead: true, createdAt: new Date(Date.now() - 1000 * 60 * 60 * 48).toISOString() },
-  { _id: 'n5', type: 'tip', title: 'Study Tip', message: 'Active recall beats re-reading. Try closing your notes and explaining the concept out loud.', link: '', isRead: false, createdAt: new Date(Date.now() - 1000 * 60 * 60 * 72).toISOString() },
-];
-
 export function AppProvider({ children }) {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
@@ -51,8 +43,8 @@ export function AppProvider({ children }) {
         setUnreadCount(data.unreadCount || 0);
       } else throw new Error('Failed');
     } catch {
-      setNotifications(MOCK_NOTIFICATIONS);
-      setUnreadCount(MOCK_NOTIFICATIONS.filter(n => !n.isRead).length);
+      setNotifications([]);
+      setUnreadCount(0);
     }
   }, [token]);
 
