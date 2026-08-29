@@ -50,7 +50,6 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
     "jest": "^29.7.0",
-    "mongodb-memory-server-core": "^11.2.0",
     "nodemon": "^3.1.14",
     "supertest": "^6.3.3"
   }

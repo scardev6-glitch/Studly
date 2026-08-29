@@ -1,8 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 async function connectDB() {
-  const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/studly';
-  await mongoose.connect(uri);
+  if (!process.env.MONGODB_URI) {
+    throw new Error("MONGODB_URI is not set");
+  }
+
+  await mongoose.connect(process.env.MONGODB_URI);
   return mongoose.connection;
 }
 
